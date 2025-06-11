@@ -1,0 +1,4 @@
+// 1.21	2025-06-11T20:47:56.2481045	Tags for minecraft:block mod id davescalamity
+2b981d400164caecb79cda4cff0a7936bbf81422 data/minecraft/tags/block/mineable/pickaxe.json
+d34a8455c16b324379eac3dd8be35c4c2b4c53ab data/minecraft/tags/block/needs_diamond_tool.json
+3eb5f96ba2ab0d523a815ff2a2804c8eb4a5c271 data/minecraft/tags/block/needs_iron_tool.json

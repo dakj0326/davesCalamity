@@ -4,6 +4,11 @@
 
   "item.davescalamity.chisel": "Chisel",
 
+  "item.davescalamity.cabbage": "Cabbage",
+  "item.davescalamity.fuel": "Fuel",
+
+
+
 
   "block.davescalamity.alexandrite_block": "Block of Alexandrite",
   "block.davescalamity.raw_alexandrite_block": "Block of Raw Alexandrite",
@@ -14,8 +19,8 @@
 
 
   "creativetab.davescalamity.alexandrite_items": "Alexandrite Items",
-  "creativetab.davescalamity.alexandrite_blocks": "Alexandrite Blocks"
+  "creativetab.davescalamity.alexandrite_blocks": "Alexandrite Blocks",
 
-
+  "tooltip.davescalamity.magic_block.tooltip": "This block will §9molest§r you"
 
 }

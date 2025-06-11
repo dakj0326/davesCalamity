@@ -1,4 +1,4 @@
-package net.dave.davesCalamity.block.custom;
+package net.dave.davesCalamity.item.custom;
 
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
