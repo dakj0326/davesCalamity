@@ -1,0 +1,21 @@
+{
+  "item.davescalamity.alexandrite": "Alexandrite",
+  "item.davescalamity.raw_alexandrite": "Raw Alexandrite",
+
+  "item.davescalamity.chisel": "Chisel",
+
+
+  "block.davescalamity.alexandrite_block": "Block of Alexandrite",
+  "block.davescalamity.raw_alexandrite_block": "Block of Raw Alexandrite",
+  "block.davescalamity.alexandrite_ore": "Alexandrite Ore",
+  "block.davescalamity.alexandrite_deepslate_ore": "Alexandrite Deepslate Ore",
+
+  "block.davescalamity.magic_block": "Magic Block",
+
+
+  "creativetab.davescalamity.alexandrite_items": "Alexandrite Items",
+  "creativetab.davescalamity.alexandrite_blocks": "Alexandrite Blocks"
+
+
+
+}
