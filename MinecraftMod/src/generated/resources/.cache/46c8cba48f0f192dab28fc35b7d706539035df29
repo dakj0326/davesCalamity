@@ -1,6 +1,13 @@
-// 1.21	2025-06-11T20:47:56.2470959	Item Models: davescalamity
+// 1.21	2025-06-13T18:19:46.2765452	Item Models: davescalamity
 01646ea5b4560694069d3f509adf838648933edb assets/davescalamity/models/item/alexandrite.json
+cbccfda586863776c1ab0de9ec403a8d3b36903d assets/davescalamity/models/item/aluminium_ingot.json
+4b3d4ff7bc28095e1c6b3d59ca77653fa75a92fb assets/davescalamity/models/item/bronze_ingot.json
 50cb0b539e57a5cb18e0514ddd8301b0a6192a37 assets/davescalamity/models/item/cabbage.json
 e9138de5e5f218137d640931140d913778e23067 assets/davescalamity/models/item/chisel.json
 936c256883ab190c778bf2625da15f210a0d08cb assets/davescalamity/models/item/fuel.json
 7abdf61b8a95b4ae7baa8887cadff4249d3a52cb assets/davescalamity/models/item/raw_alexandrite.json
+a87b6c5628eebf5e8417255d4bc4f8ef472965af assets/davescalamity/models/item/silver_ingot.json
+8dce1ac89ee33e0eb2403ca8791756f1f6245f41 assets/davescalamity/models/item/steel_ingot.json
+d07dc74a9b66501aa66140fb07559b4e8c840926 assets/davescalamity/models/item/strong_bronze_ingot.json
+c8f754c537b28dc7af437e9eef4349f930c6c557 assets/davescalamity/models/item/tin_ingot.json
+4f2480b7d9ac940dde6f9079abbe9a1d6b4f25c9 assets/davescalamity/models/item/tungsten_ingot.json

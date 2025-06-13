@@ -16,6 +16,15 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.ALEXANDRITE.get());
         basicItem(ModItems.RAW_ALEXANDRITE.get());
 
+        basicItem(ModItems.ALUMINIUM_INGOT.get());
+        basicItem(ModItems.SILVER_INGOT.get());
+        basicItem(ModItems.STRONG_BRONZE_INGOT.get());
+        basicItem(ModItems.STEEL_INGOT.get());
+        basicItem(ModItems.BRONZE_INGOT.get());
+        basicItem(ModItems.TIN_INGOT.get());
+        basicItem(ModItems.TUNGSTEN_INGOT.get());
+
+
         basicItem(ModItems.CHISEL.get());
         basicItem(ModItems.CABBAGE.get());
         basicItem(ModItems.FUEL.get());

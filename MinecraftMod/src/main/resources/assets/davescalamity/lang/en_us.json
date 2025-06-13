@@ -8,6 +8,14 @@
   "item.davescalamity.fuel": "Fuel",
 
 
+  "item.davescalamity.aluminium_ingot": "Aluminium Ingot",
+  "item.davescalamity.bronze_ingot": "Bronze Ingot",
+  "item.davescalamity.strong_bronze_ingot": "Silver Bronze Ingot",
+  "item.davescalamity.silver_ingot": "Silver Ingot",
+  "item.davescalamity.tin_ingot": "Tin Ingot",
+  "item.davescalamity.tungsten_ingot": "Tungsten Ingot",
+  "item.davescalamity.steel_ingot": "Steel Ingot",
+
 
 
   "block.davescalamity.alexandrite_block": "Block of Alexandrite",
@@ -18,9 +26,9 @@
   "block.davescalamity.magic_block": "Magic Block",
 
 
-  "creativetab.davescalamity.alexandrite_items": "Alexandrite Items",
-  "creativetab.davescalamity.alexandrite_blocks": "Alexandrite Blocks",
+  "creativetab.davescalamity.mod_items": "Alexandrite Items",
+  "creativetab.davescalamity.mod_blocks": "Alexandrite Blocks"
 
-  "tooltip.davescalamity.magic_block.tooltip": "This block will §9molest§r you"
+
 
 }
