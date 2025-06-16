@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.5,
+  "ingredient": {
+    "item": "davescalamity:raw_tungsten"
+  },
+  "result": {
+    "id": "davescalamity:tungsten_ingot"
+  }
+}

@@ -1,7 +1,6 @@
 package net.dave.davesCalamity.datagen;
 
 import net.dave.davesCalamity.DavesCalamity;
-import net.dave.davesCalamity.item.ModItems;
 import net.dave.davesCalamity.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -19,13 +18,17 @@ public class ModItemTagProvider extends ItemTagsProvider {
         super(packOutput, completableFuture, lookupCompletableFuture, DavesCalamity.MOD_ID, existingFileHelper);
     }
 
+    // SUPER IMPORTANT NOTE!!!!!
+    // SOME TAG FILES EXIST IN MAIN DIRECTORY WHICH WILL OVERWRITE ANY DUPLICATES THAT ARE GENERATED
+
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
         tag(ModTags.Items.TRANSFORMABLE_ITEMS)
-                .add(ModItems.ALEXANDRITE.get())
-                .add(ModItems.RAW_ALEXANDRITE.get())
                 .add(Items.COAL)
                 .add(Items.STICK)
                 .add(Items.COMPASS);
+
     }
+
+
 }

@@ -1,0 +1,15 @@
+{
+  "values": [
+    "davescalamity:aluminium_ore",
+    "davescalamity:deepslate_aluminium_ore",
+    "davescalamity:aluminium_block",
+    "davescalamity:raw_aluminium_block",
+    "davescalamity:silver_ore",
+    "davescalamity:deepslate_silver_ore",
+    "davescalamity:silver_block",
+    "davescalamity:raw_silver_block",
+    "minecraft:lapis_block",
+    "minecraft:lapis_ore",
+    "minecraft:deepslate_lapis_ore"
+  ]
+}

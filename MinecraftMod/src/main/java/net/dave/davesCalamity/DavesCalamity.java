@@ -2,6 +2,7 @@ package net.dave.davesCalamity;
 
 import com.mojang.logging.LogUtils;
 import net.dave.davesCalamity.block.ModBlocks;
+import net.dave.davesCalamity.component.ModDataComponent;
 import net.dave.davesCalamity.item.ModCreativeModeTabs;
 import net.dave.davesCalamity.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -46,6 +47,9 @@ public class DavesCalamity
         //Blocks
         ModBlocks.register(modEventBus);
 
+
+        ModDataComponent.register(modEventBus);
+
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
@@ -62,14 +66,6 @@ public class DavesCalamity
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
 
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.ALEXANDRITE);
-            event.accept(ModItems.RAW_ALEXANDRITE);
-        }
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(ModBlocks.ALEXANDRITE_BLOCK);
-            event.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK);
-        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

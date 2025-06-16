@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "davescalamity:block/aluminium_block",
+    "side": "davescalamity:block/aluminium_block",
+    "top": "davescalamity:block/aluminium_block"
+  }
+}

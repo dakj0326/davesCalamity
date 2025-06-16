@@ -1,0 +1,11 @@
+{
+  "values": [
+    "#davescalamity:needs_bronze_tool",
+    "#davescalamity:needs_strong_bronze_tool",
+    "#davescalamity:needs_steel_tool",
+    "#davescalamity:needs_netherite_tool",
+
+    "#minecraft:needs_diamond_tool",
+    "#minecraft:needs_iron_tool"
+  ]
+}

@@ -16,19 +16,20 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         super(output, lookupProvider, DavesCalamity.MOD_ID, existingFileHelper);
     }
 
+    // SUPER IMPORTANT NOTE!!!!!
+    // SOME TAG FILES EXIST IN MAIN DIRECTORY WHICH WILL OVERWRITE ANY DUPLICATES THAT ARE GENERATED
+
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
+        /*
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(ModBlocks.ALEXANDRITE_BLOCK.get())
-                .add(ModBlocks.RAW_ALEXANDRITE_BLOCK.get())
-                .add(ModBlocks.ALEXANDRITE_ORE.get())
-                .add(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get())
                 .add(ModBlocks.MAGIC_BLOCK.get());
 
-        tag(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get());
+         */
 
-        tag(BlockTags.NEEDS_DIAMOND_TOOL)
-                .add(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
+
+        tag(BlockTags.FENCES).add(ModBlocks.TEST_FENCE.get());
+        tag(BlockTags.FENCES).add(ModBlocks.TEST_FENCE_GATE.get());
+        tag(BlockTags.WALLS).add(ModBlocks.TEST_WALL.get());
     }
 }

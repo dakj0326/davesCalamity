@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_strong_bronze_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "davescalamity:strong_bronze_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "davescalamity:strong_bronze_pickaxe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_strong_bronze_ingot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "davescalamity:strong_bronze_pickaxe"
+    ]
+  }
+}

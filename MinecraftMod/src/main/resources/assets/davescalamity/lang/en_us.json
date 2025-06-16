@@ -1,33 +1,75 @@
 {
-  "item.davescalamity.alexandrite": "Alexandrite",
-  "item.davescalamity.raw_alexandrite": "Raw Alexandrite",
+  "block.davescalamity.aluminium_block": "Aluminium Block",
+  "block.davescalamity.aluminium_ore": "Aluminium Ore",
+  "block.davescalamity.bronze_block": "Bronze Block",
+  "block.davescalamity.deepslate_aluminium_ore": "Deepslate Aluminium Ore",
+  "block.davescalamity.deepslate_silver_ore": "Deepslate Silver Ore",
+  "block.davescalamity.deepslate_tin_ore": "Deepslate Tin Ore",
+  "block.davescalamity.deepslate_tungsten_ore": "Deepslate Tungsten Ore",
+  "block.davescalamity.raw_aluminium_block": "Raw Aluminium Block",
+  "block.davescalamity.raw_silver_block": "Raw Silver Block",
+  "block.davescalamity.raw_tin_block": "Raw Tin Block",
+  "block.davescalamity.raw_tungsten_block": "Raw Tungsten Block",
+  "block.davescalamity.silver_block": "Silver Block",
+  "block.davescalamity.silver_ore": "Silver Ore",
+  "block.davescalamity.steel_block": "Steel Block",
+  "block.davescalamity.strong_bronze_block": "Silver Bronze Block",
+  "block.davescalamity.tin_block": "Tin Block",
+  "block.davescalamity.tin_ore": "Tin Ore",
+  "block.davescalamity.tungsten_block": "Tungsten Block",
+  "block.davescalamity.tungsten_ore": "Tungsten Ore",
 
-  "item.davescalamity.chisel": "Chisel",
 
-  "item.davescalamity.cabbage": "Cabbage",
-  "item.davescalamity.fuel": "Fuel",
+
+  "creativetab.davescalamity.mod_items": "Mod Items",
+  "creativetab.davescalamity.mod_blocks": "Mod Blocks",
+  "creativetab.davescalamity.mod_foods": "Mod Foods",
+  "creativetab.davescalamity.mod_tools": "Mod Tools",
+  "creativetab.davescalamity.mod_test": "Mod Test",
+
 
 
   "item.davescalamity.aluminium_ingot": "Aluminium Ingot",
+  "item.davescalamity.bronze_axe": "Bronze Axe",
+  "item.davescalamity.bronze_hoe": "Bronze Hoe",
   "item.davescalamity.bronze_ingot": "Bronze Ingot",
-  "item.davescalamity.strong_bronze_ingot": "Silver Bronze Ingot",
+  "item.davescalamity.bronze_pickaxe": "Bronze Pickaxe",
+  "item.davescalamity.cabbage": "Cabbage",
+  "item.davescalamity.deepslate_aluminium": "Deepslate Aluminium Ore",
+  "item.davescalamity.deepslate_silver": "Deepslate Silver Ore",
+  "item.davescalamity.deepslate_tin": "Deepslate Tin Ore",
+  "item.davescalamity.deepslate_tungsten": "Deepslate Tungsten Ore",
+  "item.davescalamity.mango": "Mango",
+  "item.davescalamity.raw_aluminium": "Raw Aluminium",
+  "item.davescalamity.raw_silver": "Raw Silver",
+  "item.davescalamity.raw_tin": "Raw Tin",
+  "item.davescalamity.raw_tungsten": "Raw Tungsten",
   "item.davescalamity.silver_ingot": "Silver Ingot",
+  "item.davescalamity.steel_axe": "Steel Axe",
+  "item.davescalamity.steel_hoe": "Steel Hoe",
+  "item.davescalamity.steel_ingot": "Steel Ingot",
+  "item.davescalamity.steel_pickaxe": "Steel Pickaxe",
+  "item.davescalamity.strong_bronze_axe": "Silver Bronze Axe",
+  "item.davescalamity.strong_bronze_hoe": "Silver Bronze Hoe",
+  "item.davescalamity.strong_bronze_ingot": "Silver Bronze Ingot",
+  "item.davescalamity.strong_bronze_pickaxe": "Silver Bronze Pickaxe",
   "item.davescalamity.tin_ingot": "Tin Ingot",
   "item.davescalamity.tungsten_ingot": "Tungsten Ingot",
-  "item.davescalamity.steel_ingot": "Steel Ingot",
 
 
 
-  "block.davescalamity.alexandrite_block": "Block of Alexandrite",
-  "block.davescalamity.raw_alexandrite_block": "Block of Raw Alexandrite",
-  "block.davescalamity.alexandrite_ore": "Alexandrite Ore",
-  "block.davescalamity.alexandrite_deepslate_ore": "Alexandrite Deepslate Ore",
+
+
+  
+  
 
   "block.davescalamity.magic_block": "Magic Block",
+  "item.davescalamity.fuel": "Fuel",
+  "item.davescalamity.chisel": "Chisel"
 
 
-  "creativetab.davescalamity.mod_items": "Alexandrite Items",
-  "creativetab.davescalamity.mod_blocks": "Alexandrite Blocks"
+
+
 
 
 

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "davescalamity:block/test_slab"
+    },
+    "type=double": {
+      "model": "davescalamity:block/aluminium_block"
+    },
+    "type=top": {
+      "model": "davescalamity:block/test_slab_top"
+    }
+  }
+}

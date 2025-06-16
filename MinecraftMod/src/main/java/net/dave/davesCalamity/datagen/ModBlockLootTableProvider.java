@@ -28,13 +28,49 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-        dropSelf(ModBlocks.ALEXANDRITE_BLOCK.get());
-        dropSelf(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
+        dropSelf(ModBlocks.RAW_ALUMINIUM_BLOCK.get());
+        dropSelf(ModBlocks.RAW_SILVER_BLOCK.get());
+        dropSelf(ModBlocks.RAW_TIN_BLOCK.get());
+        dropSelf(ModBlocks.RAW_TUNGSTEN_BLOCK.get());
+        dropSelf(ModBlocks.ALUMINIUM_BLOCK.get());
+        dropSelf(ModBlocks.BRONZE_BLOCK.get());
+        dropSelf(ModBlocks.SILVER_BLOCK.get());
+        dropSelf(ModBlocks.STEEL_BLOCK.get());
+        dropSelf(ModBlocks.STRONG_BRONZE_BLOCK.get());
+        dropSelf(ModBlocks.TIN_BLOCK.get());
+        dropSelf(ModBlocks.TUNGSTEN_BLOCK.get());
 
-        this.add(ModBlocks.ALEXANDRITE_ORE.get(),
-                block -> createOreDrop(ModBlocks.ALEXANDRITE_ORE.get(), ModItems.RAW_ALEXANDRITE.get()));
-        this.add(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get(),
-                block -> createMultipleOreDrops(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get(), ModItems.RAW_ALEXANDRITE.get(), 2, 6));
+
+        dropSelf(ModBlocks.TEST_STAIR.get());
+        this.add(ModBlocks.TEST_SLAB.get(),block -> createSlabItemTable(ModBlocks.TEST_SLAB.get()));
+        dropSelf(ModBlocks.TEST_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.TEST_BUTTON.get());
+        dropSelf(ModBlocks.TEST_FENCE.get());
+        dropSelf(ModBlocks.TEST_WALL.get());
+        dropSelf(ModBlocks.TEST_FENCE_GATE.get());
+        this.add(ModBlocks.TEST_DOOR.get(), block -> createDoorTable(ModBlocks.TEST_DOOR.get()));
+        dropSelf(ModBlocks.TEST_TRAPDOOR.get());
+
+
+        // Ores
+        this.add(ModBlocks.ALUMINIUM_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.ALUMINIUM_ORE.get(), ModItems.RAW_ALUMINIUM.get(), 0, 1));
+        this.add(ModBlocks.SILVER_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.SILVER_ORE.get(), ModItems.RAW_SILVER.get(), 0, 1));
+        this.add(ModBlocks.TIN_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.TIN_ORE.get(), ModItems.RAW_TIN.get(), 0, 1));
+        this.add(ModBlocks.TUNGSTEN_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.TUNGSTEN_ORE.get(), ModItems.RAW_TUNGSTEN.get(), 0, 1));
+        this.add(ModBlocks.DEEPSLATE_ALUMINIUM_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.DEEPSLATE_ALUMINIUM_ORE.get(), ModItems.RAW_ALUMINIUM.get(), 1, 2));
+        this.add(ModBlocks.DEEPSLATE_SILVER_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.DEEPSLATE_SILVER_ORE.get(), ModItems.RAW_SILVER.get(), 1, 2));
+        this.add(ModBlocks.DEEPSLATE_TIN_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.DEEPSLATE_TIN_ORE.get(), ModItems.RAW_TIN.get(), 1, 2));
+        this.add(ModBlocks.DEEPSLATE_TUNGSTEN_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.DEEPSLATE_TUNGSTEN_ORE.get(), ModItems.RAW_TUNGSTEN.get(), 2, 2));
+
+
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "minecraft:stick"
+    },
+    "B": {
+      "item": "davescalamity:steel_ingot"
+    }
+  },
+  "pattern": [
+    "BBB",
+    " A ",
+    " A "
+  ],
+  "result": {
+    "count": 1,
+    "id": "davescalamity:steel_pickaxe"
+  }
+}
