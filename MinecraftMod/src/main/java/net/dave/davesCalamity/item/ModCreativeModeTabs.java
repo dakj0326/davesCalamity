@@ -73,6 +73,8 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.MANGO.get());
                         output.accept(ModItems.CABBAGE.get());
+                        output.accept(ModItems.HOPS_SEED.get());
+                        output.accept(ModItems.HOPS.get());
 
                     }).build());
 

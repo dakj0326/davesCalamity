@@ -6,6 +6,7 @@ import net.dave.davesCalamity.component.ModDataComponent;
 import net.dave.davesCalamity.item.ModCreativeModeTabs;
 import net.dave.davesCalamity.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -59,7 +60,11 @@ public class DavesCalamity
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-
+        // Make hops compostable
+        event.enqueueWork(() -> {
+            ComposterBlock.COMPOSTABLES.put(ModItems.HOPS.get(), 0.5f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.HOPS_SEED.get(), 0.15f);
+        });
     }
 
     // Add the example block item to the building blocks tab

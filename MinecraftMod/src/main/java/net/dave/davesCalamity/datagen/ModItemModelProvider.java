@@ -24,8 +24,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.BRONZE_HOE.get());
         basicItem(ModItems.BRONZE_INGOT.get());
         basicItem(ModItems.BRONZE_PICKAXE.get());
-        basicItem(ModItems.CABBAGE.get());
-        basicItem(ModItems.MANGO.get());
         basicItem(ModItems.RAW_ALUMINIUM.get());
         basicItem(ModItems.RAW_SILVER.get());
         basicItem(ModItems.RAW_TIN.get());
@@ -41,6 +39,14 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.STRONG_BRONZE_PICKAXE.get());
         basicItem(ModItems.TIN_INGOT.get());
         basicItem(ModItems.TUNGSTEN_INGOT.get());
+
+        // Seeds
+        basicItem(ModItems.HOPS_SEED.get());
+
+        // Food Items
+        basicItem(ModItems.CABBAGE.get());
+        basicItem(ModItems.MANGO.get());
+        basicItem(ModItems.HOPS.get());
 
         basicItem(ModItems.CHISEL.get());
         basicItem(ModItems.FUEL.get());

@@ -1,7 +1,9 @@
 package net.dave.davesCalamity.datagen;
 
 import net.dave.davesCalamity.block.ModBlocks;
+import net.dave.davesCalamity.block.custom.HopsCrop;
 import net.dave.davesCalamity.item.ModItems;
+import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.loot.BlockLootSubProvider;
@@ -16,6 +18,8 @@ import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -70,6 +74,12 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.DEEPSLATE_TUNGSTEN_ORE.get(),
                 block -> createMultipleOreDrops(ModBlocks.DEEPSLATE_TUNGSTEN_ORE.get(), ModItems.RAW_TUNGSTEN.get(), 2, 2));
 
+        // Crops
+        LootItemCondition.Builder lootItemConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.HOPS_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(HopsCrop.AGE, HopsCrop.MAX_AGE));
+
+        this.add(ModBlocks.HOPS_CROP.get(), this.createCropDrops(ModBlocks.HOPS_CROP.get(),
+                ModItems.HOPS_SEED.get(), ModItems.HOPS.get(), lootItemConditionBuilder));
 
     }
 
