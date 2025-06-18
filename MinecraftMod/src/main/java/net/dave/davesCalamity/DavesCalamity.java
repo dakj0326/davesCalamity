@@ -3,11 +3,15 @@ package net.dave.davesCalamity;
 import com.mojang.logging.LogUtils;
 import net.dave.davesCalamity.block.ModBlocks;
 import net.dave.davesCalamity.component.ModDataComponent;
+import net.dave.davesCalamity.entity.ModEntities;
+import net.dave.davesCalamity.entity.client.MandrakeRenderer;
 import net.dave.davesCalamity.item.ModCreativeModeTabs;
 import net.dave.davesCalamity.item.ModItems;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -48,6 +52,8 @@ public class DavesCalamity
         //Blocks
         ModBlocks.register(modEventBus);
 
+        // Entities
+        ModEntities.register(modEventBus);
 
         ModDataComponent.register(modEventBus);
 
@@ -87,7 +93,7 @@ public class DavesCalamity
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-
+            EntityRenderers.register(ModEntities.MANDRAKE.get(), MandrakeRenderer::new);
         }
     }
 }

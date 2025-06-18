@@ -2,9 +2,11 @@ package net.dave.davesCalamity.item;
 
 import net.dave.davesCalamity.DavesCalamity;
 import net.dave.davesCalamity.block.ModBlocks;
+import net.dave.davesCalamity.entity.ModEntities;
 import net.dave.davesCalamity.item.custom.FuelItem;
 import net.dave.davesCalamity.item.custom.ChiselItem;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -56,6 +58,10 @@ public class ModItems {
     // Seeds
     public static final RegistryObject<Item> HOPS_SEED = ITEMS.register("hops_seeds",
             () -> new ItemNameBlockItem(ModBlocks.HOPS_CROP.get(), new Item.Properties()));
+
+    // Spawn Eggs
+    public static final RegistryObject<Item> MANDRAKE_SPAWN_EGG = ITEMS.register("mandrake_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.MANDRAKE, 0x252525, 0x505050, new Item.Properties()));
 
 
 

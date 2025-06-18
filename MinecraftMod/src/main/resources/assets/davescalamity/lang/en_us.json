@@ -42,6 +42,7 @@
   "item.davescalamity.deepslate_tungsten": "Deepslate Tungsten Ore",
   "item.davescalamity.hops": "Hops",
   "item.davescalamity.hops_seeds": "Hops Seeds",
+  "item.davescalamity.mandrake_spawn_egg": "Mandrake Spawn Egg",
   "item.davescalamity.mango": "Mango",
   "item.davescalamity.raw_aluminium": "Raw Aluminium",
   "item.davescalamity.raw_silver": "Raw Silver",
@@ -58,6 +59,8 @@
   "item.davescalamity.strong_bronze_pickaxe": "Silver Bronze Pickaxe",
   "item.davescalamity.tin_ingot": "Tin Ingot",
   "item.davescalamity.tungsten_ingot": "Tungsten Ingot",
+
+  "entity.davescalamity.mandrake": "Mandrake",
 
 
 
