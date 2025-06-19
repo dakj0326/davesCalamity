@@ -6,10 +6,13 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.animal.Animal;
+import net.minecraft.world.entity.animal.Ocelot;
+import net.minecraft.world.entity.animal.Rabbit;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -26,16 +29,17 @@ public class MandrakeEntity extends Animal {
     @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(0, new FloatGoal(this)); // Inte drunkna
-        this.goalSelector.addGoal(1, new PanicGoal(this, 2.0f));
-        this.goalSelector.addGoal(2, new WaterAvoidingRandomStrollGoal(this, 1.0f));
-        this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 10.0f));
+        this.goalSelector.addGoal(1, new PanicGoal(this, 1.0f));
+        this.goalSelector.addGoal(2, new AvoidEntityGoal<>(this, Player.class, 5.0f, 1.2f, 1.2f));
+        this.goalSelector.addGoal(3, new WaterAvoidingRandomStrollGoal(this, 1.0f));
         this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
     }
+
 
     public static AttributeSupplier.Builder createAttributes() {
         return Animal.createLivingAttributes()
                 .add(Attributes.MAX_HEALTH, 50D)
-                .add(Attributes.MOVEMENT_SPEED, 0.5D)
+                .add(Attributes.MOVEMENT_SPEED, 0.2D)
                 .add(Attributes.FOLLOW_RANGE, 10D);
     }
 
