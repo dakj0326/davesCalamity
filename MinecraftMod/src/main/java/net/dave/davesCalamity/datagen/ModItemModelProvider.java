@@ -42,11 +42,13 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         // Seeds
         basicItem(ModItems.HOPS_SEED.get());
+        basicItem(ModItems.MANDRAKE_ROOT.get());
 
         // Food Items
         basicItem(ModItems.CABBAGE.get());
         basicItem(ModItems.MANGO.get());
         basicItem(ModItems.HOPS.get());
+        basicItem(ModItems.MANDRAKE.get());
 
         // Spawn Eggs
         withExistingParent(ModItems.MANDRAKE_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));

@@ -3,6 +3,7 @@ package net.dave.davesCalamity.datagen;
 import net.dave.davesCalamity.DavesCalamity;
 import net.dave.davesCalamity.block.ModBlocks;
 import net.dave.davesCalamity.block.custom.HopsCrop;
+import net.dave.davesCalamity.block.custom.MandrakeCrop;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
@@ -10,6 +11,7 @@ import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
@@ -70,18 +72,27 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.TEST_TRAPDOOR, "_bottom");
 
         // Crops
-        makeCrop(((CropBlock) ModBlocks.HOPS_CROP.get()), "hops_crop_stage", "hops_crop_stage");
+        makeCrop(((CropBlock) ModBlocks.HOPS_CROP.get()), HopsCrop.AGE,"hops_crop_stage", "hops_crop_stage");
+        makeCrop(((CropBlock) ModBlocks.MANDRAKE_CROP.get()), MandrakeCrop.AGE, "mandrake_crop_stage", "mandrake_crop_stage");
     }
 
-    public void makeCrop(CropBlock block, String modelName, String textureName) {
-        Function<BlockState, ConfiguredModel[]> function = state -> states(state, block, modelName, textureName);
+    public void makeCrop(CropBlock block, IntegerProperty ageProperty, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> states(state, block, ageProperty, modelName, textureName);
         getVariantBuilder(block).forAllStates(function);
     }
-    // Hårdkod specifik för hops
-    private ConfiguredModel[] states(BlockState state, CropBlock block, String modelName, String textureName) {
+
+    // Get crop model based on age which equals it's stage
+    private ConfiguredModel[] states(BlockState state, CropBlock block, IntegerProperty ageProperty, String modelName, String textureName) {
+        int age = state.getValue(ageProperty);
         ConfiguredModel[] models = new ConfiguredModel[1];
-        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((HopsCrop) block).getAgeProperty()),
-                ResourceLocation.fromNamespaceAndPath(DavesCalamity.MOD_ID, "block/" + textureName + state.getValue(((HopsCrop) block).getAgeProperty()))).renderType("cutout"));
+        models[0] = new ConfiguredModel(
+                models()
+                        .crop(modelName + age,
+                                ResourceLocation.fromNamespaceAndPath(
+                                        DavesCalamity.MOD_ID,
+                                        "block/" + textureName + age))
+                        .renderType("cutout")
+        );
         return models;
     }
 

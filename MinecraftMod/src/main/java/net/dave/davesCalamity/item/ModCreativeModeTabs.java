@@ -76,6 +76,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.HOPS_SEED.get());
                         output.accept(ModItems.HOPS.get());
                         output.accept(ModItems.MANDRAKE_SPAWN_EGG.get());
+                        output.accept(ModItems.MANDRAKE_ROOT.get());
+                        output.accept(ModItems.MANDRAKE.get());
 
                     }).build());
 

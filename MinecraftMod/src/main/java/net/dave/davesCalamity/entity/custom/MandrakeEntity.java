@@ -1,6 +1,8 @@
 package net.dave.davesCalamity.entity.custom;
 
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.entity.EntityType;
@@ -62,5 +64,22 @@ public class MandrakeEntity extends Animal {
         if(this.level().isClientSide()) {
             this.setupAnimationStates();
         }
+    }
+
+    // Sounds
+
+    @Override
+    protected @Nullable SoundEvent getAmbientSound() {
+        return super.getAmbientSound();
+    }
+
+    @Override
+    protected @Nullable SoundEvent getDeathSound() {
+        return super.getDeathSound();
+    }
+
+    @Override
+    protected @Nullable SoundEvent getHurtSound(DamageSource pDamageSource) {
+        return super.getHurtSound(pDamageSource);
     }
 }

@@ -66,10 +66,12 @@ public class DavesCalamity
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-        // Make hops compostable
+        // Make crops compostable
         event.enqueueWork(() -> {
             ComposterBlock.COMPOSTABLES.put(ModItems.HOPS.get(), 0.5f);
             ComposterBlock.COMPOSTABLES.put(ModItems.HOPS_SEED.get(), 0.15f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.MANDRAKE.get(), 0.5f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.MANDRAKE_ROOT.get(), 0.15f);
         });
     }
 

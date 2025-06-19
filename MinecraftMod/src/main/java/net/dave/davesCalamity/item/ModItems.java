@@ -51,6 +51,7 @@ public class ModItems {
 
     // Crop Materials
     public static final RegistryObject<Item> HOPS = ITEMS.register("hops", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> MANDRAKE = ITEMS.register("mandrake", () -> new Item(new Item.Properties()));
 
     // Fuel
     public static final RegistryObject<Item> FUEL = ITEMS.register("fuel", () -> new FuelItem(new Item.Properties(), 1200));
@@ -58,6 +59,9 @@ public class ModItems {
     // Seeds
     public static final RegistryObject<Item> HOPS_SEED = ITEMS.register("hops_seeds",
             () -> new ItemNameBlockItem(ModBlocks.HOPS_CROP.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> MANDRAKE_ROOT = ITEMS.register("mandrake_root",
+            () -> new ItemNameBlockItem(ModBlocks.MANDRAKE_CROP.get(), new Item.Properties()));
 
     // Spawn Eggs
     public static final RegistryObject<Item> MANDRAKE_SPAWN_EGG = ITEMS.register("mandrake_spawn_egg",

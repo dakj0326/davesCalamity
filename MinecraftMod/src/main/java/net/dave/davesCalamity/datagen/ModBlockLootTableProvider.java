@@ -2,6 +2,7 @@ package net.dave.davesCalamity.datagen;
 
 import net.dave.davesCalamity.block.ModBlocks;
 import net.dave.davesCalamity.block.custom.HopsCrop;
+import net.dave.davesCalamity.block.custom.MandrakeCrop;
 import net.dave.davesCalamity.item.ModItems;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.HolderLookup;
@@ -13,6 +14,8 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.CropBlock;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
@@ -24,6 +27,7 @@ import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Set;
+import java.util.function.Supplier;
 
 public class ModBlockLootTableProvider extends BlockLootSubProvider {
     protected ModBlockLootTableProvider(HolderLookup.Provider pRegistries) {
@@ -75,12 +79,21 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 block -> createMultipleOreDrops(ModBlocks.DEEPSLATE_TUNGSTEN_ORE.get(), ModItems.RAW_TUNGSTEN.get(), 2, 2));
 
         // Crops
-        LootItemCondition.Builder lootItemConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.HOPS_CROP.get())
-                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(HopsCrop.AGE, HopsCrop.MAX_AGE));
-
         this.add(ModBlocks.HOPS_CROP.get(), this.createCropDrops(ModBlocks.HOPS_CROP.get(),
-                ModItems.HOPS_SEED.get(), ModItems.HOPS.get(), lootItemConditionBuilder));
+                ModItems.HOPS_SEED.get(), ModItems.HOPS.get(), cropFullyGrownCondition(ModBlocks.HOPS_CROP, HopsCrop.AGE, HopsCrop.MAX_AGE)));
 
+        this.add(ModBlocks.MANDRAKE_CROP.get(), this.createCropDrops(ModBlocks.MANDRAKE_CROP.get(),
+                ModItems.MANDRAKE_ROOT.get(), ModItems.MANDRAKE.get(), cropFullyGrownCondition(ModBlocks.MANDRAKE_CROP, MandrakeCrop.AGE, MandrakeCrop.MAX_AGE)));
+
+    }
+    // Loot from harvest if crop is fully grown
+    public static <T extends CropBlock> LootItemCondition.Builder cropFullyGrownCondition(
+            Supplier<? extends Block> cropBlockSupplier,
+            IntegerProperty ageProperty,
+            int maxAge) {
+
+        return LootItemBlockStatePropertyCondition.hasBlockStateProperties(cropBlockSupplier.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(ageProperty, maxAge));
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {

@@ -3,6 +3,7 @@ package net.dave.davesCalamity.block;
 import net.dave.davesCalamity.DavesCalamity;
 import net.dave.davesCalamity.block.custom.HopsCrop;
 import net.dave.davesCalamity.block.custom.MagicBlock;
+import net.dave.davesCalamity.block.custom.MandrakeCrop;
 import net.dave.davesCalamity.item.ModItems;
 import net.minecraft.BlockUtil;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -88,6 +89,15 @@ public class ModBlocks {
     // Crops
     public static final RegistryObject<Block> HOPS_CROP = BLOCKS.register("hops_crop",
             () -> new HopsCrop(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.PLANT)
+                    .noCollission()
+                    .randomTicks()
+                    .instabreak()
+                    .sound(SoundType.CROP)
+                    .pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> MANDRAKE_CROP = BLOCKS.register("mandrake_crop",
+            () -> new MandrakeCrop(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.PLANT)
                     .noCollission()
                     .randomTicks()
