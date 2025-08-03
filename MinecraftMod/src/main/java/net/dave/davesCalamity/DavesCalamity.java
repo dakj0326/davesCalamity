@@ -6,8 +6,6 @@ import net.dave.davesCalamity.component.ModDataComponent;
 import net.dave.davesCalamity.item.ModCreativeModeTabs;
 import net.dave.davesCalamity.item.ModItems;
 import net.dave.davesCalamity.menu.ModMenuTypes;
-import net.dave.davesCalamity.recipeTypes.ModRecipeTypes;
-import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -48,12 +46,7 @@ public class DavesCalamity
         ModItems.register(modEventBus);
         // Blocks
         ModBlocks.register(modEventBus);
-        // Recipe
-        ModRecipeTypes.register(modEventBus);
-        // Menu
-        ModMenuTypes.register(modEventBus);
-
-
+        // Component
         ModDataComponent.register(modEventBus);
 
         // Register the item to a creative tab
