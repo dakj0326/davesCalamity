@@ -5,7 +5,9 @@ import net.dave.davesCalamity.block.ModBlocks;
 import net.dave.davesCalamity.component.ModDataComponent;
 import net.dave.davesCalamity.item.ModCreativeModeTabs;
 import net.dave.davesCalamity.item.ModItems;
-import net.minecraft.world.item.CreativeModeTabs;
+import net.dave.davesCalamity.menu.ModMenuTypes;
+import net.dave.davesCalamity.recipeTypes.ModRecipeTypes;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -40,12 +42,16 @@ public class DavesCalamity
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
+        // Tabs
         ModCreativeModeTabs.register(modEventBus);
-
-        //Items
+        // Items
         ModItems.register(modEventBus);
-        //Blocks
+        // Blocks
         ModBlocks.register(modEventBus);
+        // Recipe
+        ModRecipeTypes.register(modEventBus);
+        // Menu
+        ModMenuTypes.register(modEventBus);
 
 
         ModDataComponent.register(modEventBus);

@@ -1,7 +1,7 @@
 package net.dave.davesCalamity.item;
 
 import net.dave.davesCalamity.DavesCalamity;
-import net.dave.davesCalamity.item.custom.FuelItem;
+import net.dave.davesCalamity.item.custom.CokeItem;
 import net.dave.davesCalamity.item.custom.ChiselItem;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.HoeItem;
@@ -52,7 +52,7 @@ public class ModItems {
     public static final RegistryObject<Item> MANGO = ITEMS.register("mango", () -> new Item(new Item.Properties().food(ModFoodProperties.MANGO)));
 
     // Fuel
-    public static final RegistryObject<Item> FUEL = ITEMS.register("fuel", () -> new FuelItem(new Item.Properties(), 1200));
+    public static final RegistryObject<Item> COKE = ITEMS.register("coke", () -> new CokeItem(new Item.Properties(), 6800));
 
 
 

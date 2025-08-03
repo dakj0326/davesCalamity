@@ -39,6 +39,7 @@
   "item.davescalamity.deepslate_silver": "Deepslate Silver Ore",
   "item.davescalamity.deepslate_tin": "Deepslate Tin Ore",
   "item.davescalamity.deepslate_tungsten": "Deepslate Tungsten Ore",
+  "item.davescalamity.coke": "Coke",
   "item.davescalamity.mango": "Mango",
   "item.davescalamity.raw_aluminium": "Raw Aluminium",
   "item.davescalamity.raw_silver": "Raw Silver",
@@ -64,7 +65,6 @@
   
 
   "block.davescalamity.magic_block": "Magic Block",
-  "item.davescalamity.fuel": "Fuel",
   "item.davescalamity.chisel": "Chisel"
 
 

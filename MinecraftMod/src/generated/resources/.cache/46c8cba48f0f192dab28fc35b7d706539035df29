@@ -1,4 +1,4 @@
-// 1.21	2025-06-16T23:58:35.4776389	Item Models: davescalamity
+// 1.21	2025-07-02T23:16:22.5751406	Item Models: davescalamity
 cbccfda586863776c1ab0de9ec403a8d3b36903d assets/davescalamity/models/item/aluminium_ingot.json
 2601351208d6812731d2f6fd82e495fe9fb4f6fd assets/davescalamity/models/item/bronze_axe.json
 aa84de0e12dece10b4f0045a70f17367083a2491 assets/davescalamity/models/item/bronze_hoe.json
@@ -6,7 +6,7 @@ aa84de0e12dece10b4f0045a70f17367083a2491 assets/davescalamity/models/item/bronze
 00fc6e69fb7dd9a6aec501e7e126a2171cd5d53f assets/davescalamity/models/item/bronze_pickaxe.json
 50cb0b539e57a5cb18e0514ddd8301b0a6192a37 assets/davescalamity/models/item/cabbage.json
 e9138de5e5f218137d640931140d913778e23067 assets/davescalamity/models/item/chisel.json
-936c256883ab190c778bf2625da15f210a0d08cb assets/davescalamity/models/item/fuel.json
+1e3f6b64509c9e4d1ca74e0b16a41e0ab0080247 assets/davescalamity/models/item/coke.json
 ecd8f7a08a0375b986778bac55dde633c18d772f assets/davescalamity/models/item/mango.json
 ae1ffcc36b063f6fc9963d56857118767729ebd3 assets/davescalamity/models/item/raw_aluminium.json
 050a89e63ff7fcc55b22d130c7fbbc06b09e5914 assets/davescalamity/models/item/raw_silver.json

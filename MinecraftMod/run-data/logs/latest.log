@@ -1,27 +1,27 @@
-[16Jun2025 23:58:29.754] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_userdev_data, --assetIndex, 17, --assetsDir, C:\Users\David\.gradle\caches\forge_gradle\assets, --gameDir, ., --mod, davescalamity, --all, --output, C:\Users\David\Desktop\davesCalamity\MinecraftMod\src\generated\resources, --existing, C:\Users\David\Desktop\davesCalamity\MinecraftMod\src\main\resources]
-[16Jun2025 23:58:29.756] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.7+6-LTS
-[16Jun2025 23:58:29.757] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.2.1 starting: java version 21.0.7 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
-[16Jun2025 23:58:29.842] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forge_userdev_data
-[16Jun2025 23:58:29.923] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:///C:/Users/David/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.7/8ab114ac385e6dbdad5efafe28aba4df8120915f/mixin-0.8.7.jar!/ Service=ModLauncher Env=UNKNOWN
-[16Jun2025 23:58:30.580] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[16Jun2025 23:58:31.123] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_data' with arguments [--gameDir, ., --assetsDir, C:\Users\David\.gradle\caches\forge_gradle\assets, --assetIndex, 17, --mod, davescalamity, --all, --output, C:\Users\David\Desktop\davesCalamity\MinecraftMod\src\generated\resources, --existing, C:\Users\David\Desktop\davesCalamity\MinecraftMod\src\main\resources]
-[16Jun2025 23:58:34.642] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 51.0.33, for MC 1.21 with MCP 20240613.102039
-[16Jun2025 23:58:34.642] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v51.0.33 Initialized
-[16Jun2025 23:58:34.653] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
-[16Jun2025 23:58:35.066] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [davescalamity]
-[16Jun2025 23:58:35.105] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/David/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_parchment_2025.06.01-1.21.5/forge-1.21-51.0.33_mapped_parchment_2025.06.01-1.21.5-recomp.jar%230!/assets/.mcassetsroot' uses unexpected schema
-[16Jun2025 23:58:35.105] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/David/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_parchment_2025.06.01-1.21.5/forge-1.21-51.0.33_mapped_parchment_2025.06.01-1.21.5-recomp.jar%230!/data/.mcassetsroot' uses unexpected schema
-[16Jun2025 23:58:35.189] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
-[16Jun2025 23:58:35.328] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 137 ms
-[16Jun2025 23:58:35.328] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
-[16Jun2025 23:58:35.361] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 32 ms
-[16Jun2025 23:58:35.361] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id davescalamity
-[16Jun2025 23:58:35.366] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id davescalamity finished after 4 ms
-[16Jun2025 23:58:35.366] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id davescalamity
-[16Jun2025 23:58:35.367] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id davescalamity finished after 1 ms
-[16Jun2025 23:58:35.367] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: davescalamity
-[16Jun2025 23:58:35.376] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: davescalamity finished after 8 ms
-[16Jun2025 23:58:35.376] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: davescalamity
-[16Jun2025 23:58:35.476] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: davescalamity finished after 99 ms
-[16Jun2025 23:58:35.476] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 287 ms
-[16Jun2025 23:58:35.483] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 232, old count: 227, new count: 233, removed stale: 0, written: 6
+[03Aug2025 15:17:02.820] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_userdev_data, --assetIndex, 17, --assetsDir, C:\Users\David\.gradle\caches\forge_gradle\assets, --gameDir, ., --mod, davescalamity, --all, --output, C:\Users\David\Desktop\davesCalamity\MinecraftMod\src\generated\resources, --existing, C:\Users\David\Desktop\davesCalamity\MinecraftMod\src\main\resources]
+[03Aug2025 15:17:02.828] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.7+6-LTS
+[03Aug2025 15:17:02.829] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.2.1 starting: java version 21.0.7 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
+[03Aug2025 15:17:02.936] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forge_userdev_data
+[03Aug2025 15:17:03.029] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:///C:/Users/David/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.7/8ab114ac385e6dbdad5efafe28aba4df8120915f/mixin-0.8.7.jar!/ Service=ModLauncher Env=UNKNOWN
+[03Aug2025 15:17:03.739] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[03Aug2025 15:17:04.399] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_data' with arguments [--gameDir, ., --assetsDir, C:\Users\David\.gradle\caches\forge_gradle\assets, --assetIndex, 17, --mod, davescalamity, --all, --output, C:\Users\David\Desktop\davesCalamity\MinecraftMod\src\generated\resources, --existing, C:\Users\David\Desktop\davesCalamity\MinecraftMod\src\main\resources]
+[03Aug2025 15:17:08.219] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 51.0.33, for MC 1.21 with MCP 20240613.102039
+[03Aug2025 15:17:08.219] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v51.0.33 Initialized
+[03Aug2025 15:17:08.236] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
+[03Aug2025 15:17:08.676] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [davescalamity]
+[03Aug2025 15:17:08.725] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/David/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_parchment_2025.06.01-1.21.5/forge-1.21-51.0.33_mapped_parchment_2025.06.01-1.21.5-recomp.jar%230!/assets/.mcassetsroot' uses unexpected schema
+[03Aug2025 15:17:08.725] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/David/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_parchment_2025.06.01-1.21.5/forge-1.21-51.0.33_mapped_parchment_2025.06.01-1.21.5-recomp.jar%230!/data/.mcassetsroot' uses unexpected schema
+[03Aug2025 15:17:08.838] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[03Aug2025 15:17:08.966] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 127 ms
+[03Aug2025 15:17:08.966] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[03Aug2025 15:17:09.006] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 39 ms
+[03Aug2025 15:17:09.006] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id davescalamity
+[03Aug2025 15:17:09.011] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id davescalamity finished after 5 ms
+[03Aug2025 15:17:09.012] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id davescalamity
+[03Aug2025 15:17:09.013] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id davescalamity finished after 1 ms
+[03Aug2025 15:17:09.013] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: davescalamity
+[03Aug2025 15:17:09.020] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: davescalamity finished after 6 ms
+[03Aug2025 15:17:09.020] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: davescalamity
+[03Aug2025 15:17:09.138] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: davescalamity finished after 116 ms
+[03Aug2025 15:17:09.138] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 299 ms
+[03Aug2025 15:17:09.144] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 233, old count: 233, new count: 233, removed stale: 1, written: 0

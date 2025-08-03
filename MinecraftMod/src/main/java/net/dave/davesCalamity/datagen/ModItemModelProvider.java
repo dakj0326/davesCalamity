@@ -43,7 +43,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.TUNGSTEN_INGOT.get());
 
         basicItem(ModItems.CHISEL.get());
-        basicItem(ModItems.FUEL.get());
+        basicItem(ModItems.COKE.get());
 
 
         buttonItem(ModBlocks.TEST_BUTTON, ModBlocks.ALUMINIUM_BLOCK);

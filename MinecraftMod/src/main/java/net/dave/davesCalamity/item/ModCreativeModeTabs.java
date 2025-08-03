@@ -18,7 +18,7 @@ public class ModCreativeModeTabs {
                     () -> new ItemStack(ModItems.RAW_SILVER.get()))
                     .title(Component.translatable("creativetab.davescalamity.mod_items"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModItems.FUEL.get());
+                        output.accept(ModItems.COKE.get());
                         // Ingots
                         output.accept(ModItems.ALUMINIUM_INGOT.get());
                         output.accept(ModItems.STEEL_INGOT.get());

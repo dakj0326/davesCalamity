@@ -3,7 +3,6 @@ package net.dave.davesCalamity.block;
 import net.dave.davesCalamity.DavesCalamity;
 import net.dave.davesCalamity.block.custom.MagicBlock;
 import net.dave.davesCalamity.item.ModItems;
-import net.minecraft.BlockUtil;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -59,6 +58,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> RAW_TUNGSTEN_BLOCK = registerBlock("raw_tungsten_block", () -> new Block(BlockBehaviour.Properties.of()
             .strength(4f).requiresCorrectToolForDrops()));
+
 
     // Metals
     public static final RegistryObject<Block> ALUMINIUM_BLOCK = registerBlock("aluminium_block", () -> new Block(BlockBehaviour.Properties.of()
