@@ -3,10 +3,15 @@ package net.dave.davesCalamity;
 import com.mojang.logging.LogUtils;
 import net.dave.davesCalamity.block.ModBlocks;
 import net.dave.davesCalamity.component.ModDataComponent;
+import net.dave.davesCalamity.entity.ModEntities;
+import net.dave.davesCalamity.entity.client.MandrakeRenderer;
 import net.dave.davesCalamity.item.ModCreativeModeTabs;
 import net.dave.davesCalamity.item.ModItems;
-import net.dave.davesCalamity.menu.ModMenuTypes;
+import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -46,6 +51,10 @@ public class DavesCalamity
         ModItems.register(modEventBus);
         // Blocks
         ModBlocks.register(modEventBus);
+
+        // Entities
+        ModEntities.register(modEventBus);
+
         // Component
         ModDataComponent.register(modEventBus);
 
@@ -58,7 +67,13 @@ public class DavesCalamity
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-
+        // Make crops compostable
+        event.enqueueWork(() -> {
+            ComposterBlock.COMPOSTABLES.put(ModItems.HOPS.get(), 0.5f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.HOPS_SEED.get(), 0.15f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.MANDRAKE.get(), 0.5f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.MANDRAKE_ROOT.get(), 0.15f);
+        });
     }
 
     // Add the example block item to the building blocks tab
@@ -81,7 +96,7 @@ public class DavesCalamity
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-
+            EntityRenderers.register(ModEntities.MANDRAKE.get(), MandrakeRenderer::new);
         }
     }
 }

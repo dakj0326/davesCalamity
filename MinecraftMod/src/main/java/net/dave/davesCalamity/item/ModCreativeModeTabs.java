@@ -73,6 +73,10 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.MANGO.get());
                         output.accept(ModItems.CABBAGE.get());
+                        output.accept(ModItems.HOPS_SEED.get());
+                        output.accept(ModItems.HOPS.get());
+                        output.accept(ModItems.MANDRAKE_ROOT.get());
+                        output.accept(ModItems.MANDRAKE.get());
 
                     }).build());
 
@@ -113,7 +117,14 @@ public class ModCreativeModeTabs {
 
                     }).build());
 
-
+    public static final RegistryObject<CreativeModeTab> MOD_SPAWN_TAB = CREATIVE_MODE_TABS.register(
+            "mod_spawn_tab", () -> CreativeModeTab.builder().icon(
+                            () -> new ItemStack(ModItems.MANDRAKE_SPAWN_EGG.get()))
+                    .withTabsBefore(MOD_TEST_TAB.getId())
+                    .title(Component.translatable("creativetab.davescalamity.mod_foods"))
+                    .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModItems.MANDRAKE_SPAWN_EGG.get());
+                    }).build());
 
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);

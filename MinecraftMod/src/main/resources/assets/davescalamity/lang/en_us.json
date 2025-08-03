@@ -6,6 +6,8 @@
   "block.davescalamity.deepslate_silver_ore": "Deepslate Silver Ore",
   "block.davescalamity.deepslate_tin_ore": "Deepslate Tin Ore",
   "block.davescalamity.deepslate_tungsten_ore": "Deepslate Tungsten Ore",
+  "block.davescalamity.hops_crop": "Hops Crop",
+  "block.davescalamity.mandrake_crop": "Mandrake Crop",
   "block.davescalamity.raw_aluminium_block": "Raw Aluminium Block",
   "block.davescalamity.raw_silver_block": "Raw Silver Block",
   "block.davescalamity.raw_tin_block": "Raw Tin Block",
@@ -35,11 +37,16 @@
   "item.davescalamity.bronze_ingot": "Bronze Ingot",
   "item.davescalamity.bronze_pickaxe": "Bronze Pickaxe",
   "item.davescalamity.cabbage": "Cabbage",
+  "item.davescalamity.coke": "Coke",
   "item.davescalamity.deepslate_aluminium": "Deepslate Aluminium Ore",
   "item.davescalamity.deepslate_silver": "Deepslate Silver Ore",
   "item.davescalamity.deepslate_tin": "Deepslate Tin Ore",
   "item.davescalamity.deepslate_tungsten": "Deepslate Tungsten Ore",
-  "item.davescalamity.coke": "Coke",
+  "item.davescalamity.hops": "Hops",
+  "item.davescalamity.hops_seeds": "Hops Seeds",
+  "item.davescalamity.mandrake_spawn_egg": "Mandrake Spawn Egg",
+  "item.davescalamity.mandrake": "Mandrake",
+  "item.davescalamity.mandrake_root": "Mandrake Root",
   "item.davescalamity.mango": "Mango",
   "item.davescalamity.raw_aluminium": "Raw Aluminium",
   "item.davescalamity.raw_silver": "Raw Silver",
@@ -56,6 +63,8 @@
   "item.davescalamity.strong_bronze_pickaxe": "Silver Bronze Pickaxe",
   "item.davescalamity.tin_ingot": "Tin Ingot",
   "item.davescalamity.tungsten_ingot": "Tungsten Ingot",
+
+  "entity.davescalamity.mandrake": "Mandrake",
 
 
 
