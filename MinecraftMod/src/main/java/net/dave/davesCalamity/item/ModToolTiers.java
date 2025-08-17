@@ -9,7 +9,7 @@ public class ModToolTiers {
     public static final Tier BRONZE = new ForgeTier(
             169,
             4.5f,
-            1.3f,
+            1.0f,
             8,
             ModTags.Blocks.NEEDS_BRONZE_TOOL,
             () -> Ingredient.of(ModItems.BRONZE_INGOT.get()),
@@ -18,7 +18,7 @@ public class ModToolTiers {
     public static final Tier STRONG_BRONZE = new ForgeTier(
             214,
             5.5f,
-            1.7f,
+            1.0f,
             10,
             ModTags.Blocks.NEEDS_STRONG_BRONZE_TOOL,
             () -> Ingredient.of(ModItems.STRONG_BRONZE_INGOT.get()),
@@ -27,7 +27,7 @@ public class ModToolTiers {
     public static final Tier STEEL = new ForgeTier(
             532,
             7.0f,
-            2.5f,
+            1.0f,
             5,
             ModTags.Blocks.NEEDS_STEEL_TOOL,
             () -> Ingredient.of(ModItems.STEEL_INGOT.get()),

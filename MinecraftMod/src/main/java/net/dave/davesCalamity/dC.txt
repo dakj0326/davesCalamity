@@ -1,9 +1,0 @@
-
-
-Plants
-{
-    Hops - Crop
-    Mangrove - Crop/Mob
-    Blueberry - Crop
-
-}

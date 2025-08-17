@@ -8,12 +8,10 @@ import net.dave.davesCalamity.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
-import net.minecraftforge.fml.common.Mod;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -52,24 +50,37 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         fullBlock(ModItems.TIN_INGOT.get(), ModBlocks.TIN_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, pRecipeOutput);
         fullBlock(ModItems.TUNGSTEN_INGOT.get(), ModBlocks.TUNGSTEN_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, pRecipeOutput);
 
-        // Pickaxe Crafting
+        // Tools Crafting
         pickaxe(ModItems.BRONZE_INGOT.get(), ModItems.BRONZE_PICKAXE.get(), RecipeCategory.TOOLS, pRecipeOutput);
         pickaxe(ModItems.STRONG_BRONZE_INGOT.get(), ModItems.STRONG_BRONZE_PICKAXE.get(), RecipeCategory.TOOLS, pRecipeOutput);
         pickaxe(ModItems.STEEL_INGOT.get(), ModItems.STEEL_PICKAXE.get(), RecipeCategory.TOOLS, pRecipeOutput);
+        axe(ModItems.BRONZE_INGOT.get(), ModItems.BRONZE_AXE.get(), RecipeCategory.TOOLS, pRecipeOutput);
+        axe(ModItems.STRONG_BRONZE_INGOT.get(), ModItems.STRONG_BRONZE_AXE.get(), RecipeCategory.TOOLS, pRecipeOutput);
+        axe(ModItems.STEEL_INGOT.get(), ModItems.STEEL_AXE.get(), RecipeCategory.TOOLS, pRecipeOutput);
+        hoe(ModItems.BRONZE_INGOT.get(), ModItems.BRONZE_HOE.get(), RecipeCategory.TOOLS, pRecipeOutput);
+        hoe(ModItems.STRONG_BRONZE_INGOT.get(), ModItems.STRONG_BRONZE_HOE.get(), RecipeCategory.TOOLS, pRecipeOutput);
+        hoe(ModItems.STEEL_INGOT.get(), ModItems.STEEL_HOE.get(), RecipeCategory.TOOLS, pRecipeOutput);
+
 
         // Smelting
         smelt(ModItems.RAW_ALUMINIUM.get(), ModItems.ALUMINIUM_INGOT.get(), RecipeCategory.MISC, 0.5f, 200, pRecipeOutput);
         smelt(ModItems.RAW_SILVER.get(), ModItems.SILVER_INGOT.get(), RecipeCategory.MISC, 0.7f, 200, pRecipeOutput);
         smelt(ModItems.RAW_TIN.get(), ModItems.TIN_INGOT.get(), RecipeCategory.MISC, 0.3f, 200, pRecipeOutput);
         smelt(ModItems.RAW_TUNGSTEN.get(), ModItems.TUNGSTEN_INGOT.get(), RecipeCategory.MISC, 0.5f, 200, pRecipeOutput);
+        smelt(Items.COAL, ModItems.COKE.get(), RecipeCategory.MISC, 0.5f, 400, "smelting_coal_to_coke", pRecipeOutput);
+
 
         // Blasting
         blast(ModItems.RAW_ALUMINIUM.get(), ModItems.ALUMINIUM_INGOT.get(), RecipeCategory.MISC, 0.5f, 100, "blasting_aluminium_ingot", pRecipeOutput);
         blast(ModItems.RAW_SILVER.get(), ModItems.SILVER_INGOT.get(), RecipeCategory.MISC, 0.7f, 100, "blasting_silver_ingot", pRecipeOutput);
         blast(ModItems.RAW_TIN.get(), ModItems.TIN_INGOT.get(), RecipeCategory.MISC, 0.3f, 100, "blasting_tin_ingot", pRecipeOutput);
         blast(ModItems.RAW_TUNGSTEN.get(), ModItems.TUNGSTEN_INGOT.get(), RecipeCategory.MISC, 0.5f, 100, "blasting_tungsten_ingot", pRecipeOutput);
+        blast(Items.COAL, ModItems.COKE.get(), RecipeCategory.MISC, 0.5f, 200, "blasting_coal_to_coke", pRecipeOutput);
 
-
+        // Alloys
+        simpleAlloy(Items.COPPER_INGOT, ModItems.TIN_INGOT.get(), ModItems.BRONZE_INGOT.get(), RecipeCategory.MISC, pRecipeOutput);
+        simpleAlloy(Items.IRON_INGOT, ModItems.COKE.get(), ModItems.STEEL_INGOT.get(), RecipeCategory.MISC, pRecipeOutput);
+        advancedAlloy(Items.COPPER_INGOT, ModItems.SILVER_INGOT.get(), ModItems.ALUMINIUM_INGOT.get(), ModItems.STRONG_BRONZE_INGOT.get(), RecipeCategory.MISC, pRecipeOutput);
 
 
         // TESTING
@@ -138,6 +149,46 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A', Items.STICK)
                 .define('B', input)
                 .unlockedBy(getHasName(input), has(input)).save(recipeOutput);
+    }
+    protected static void axe(ItemLike input, ItemLike output, RecipeCategory category, RecipeOutput recipeOutput) {
+        ShapedRecipeBuilder.shaped(category, output)
+                .pattern("BBB")
+                .pattern(" A ")
+                .pattern(" A ")
+                .define('A', Items.STICK)
+                .define('B', input)
+                .unlockedBy(getHasName(input), has(input)).save(recipeOutput);
+    }
+    protected static void hoe(ItemLike input, ItemLike output, RecipeCategory category, RecipeOutput recipeOutput) {
+        ShapedRecipeBuilder.shaped(category, output)
+                .pattern("BBB")
+                .pattern(" A ")
+                .pattern(" A ")
+                .define('A', Items.STICK)
+                .define('B', input)
+                .unlockedBy(getHasName(input), has(input)).save(recipeOutput);
+    }
+
+
+    protected static void simpleAlloy(ItemLike item_1, ItemLike item_2, ItemLike output, RecipeCategory category, RecipeOutput recipeOutput) {
+        ShapedRecipeBuilder.shaped(category, output, 6)
+                .pattern("BBB")
+                .pattern("BAA")
+                .pattern("AA ")
+                .define('A', item_2)
+                .define('B', item_1)
+                .unlockedBy(getHasName(item_1), has(item_1)).save(recipeOutput);
+    }
+
+    protected static void advancedAlloy(ItemLike item_1, ItemLike item_2, ItemLike item_3, ItemLike output, RecipeCategory category, RecipeOutput recipeOutput) {
+        ShapedRecipeBuilder.shaped(category, output, 6)
+                .pattern("BBA")
+                .pattern("BAC")
+                .pattern("ACC")
+                .define('A', item_1)
+                .define('B', item_2)
+                .define('C', item_3)
+                .unlockedBy(getHasName(item_1), has(item_1)).save(recipeOutput);
     }
 
 
