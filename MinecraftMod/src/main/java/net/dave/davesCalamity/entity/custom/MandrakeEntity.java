@@ -38,8 +38,8 @@ public class MandrakeEntity extends Animal {
 
     public static AttributeSupplier.Builder createAttributes() {
         return Animal.createLivingAttributes()
-                .add(Attributes.MAX_HEALTH, 50D)
-                .add(Attributes.MOVEMENT_SPEED, 0.2D)
+                .add(Attributes.MAX_HEALTH, 2.5D)
+                .add(Attributes.MOVEMENT_SPEED, 0.3D)
                 .add(Attributes.FOLLOW_RANGE, 10D);
     }
 
