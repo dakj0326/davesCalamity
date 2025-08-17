@@ -99,6 +99,17 @@ public class ModCreativeModeTabs {
 
                     }).build());
 
+    public static final RegistryObject<CreativeModeTab> MOD_DECORATIVE_TAB = CREATIVE_MODE_TABS.register(
+            "mod_decorative_tab", () -> CreativeModeTab.builder().icon(
+                            () -> new ItemStack(ModBlocks.BLOOMING_CACTUS.get()))
+                    .withTabsBefore(MOD_TOOLS_TAB.getId())
+                    .title(Component.translatable("creativetab.davescalamity.mod_decorative"))
+                    .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModBlocks.BLOOMING_CACTUS.get());
+                        output.accept(ModBlocks.SMALL_CACTUS.get());
+
+                    }).build());
+
     public static final RegistryObject<CreativeModeTab> MOD_TEST_TAB = CREATIVE_MODE_TABS.register(
             "mod_test_tab", () -> CreativeModeTab.builder().icon(
                             () -> new ItemStack(ModBlocks.MAGIC_BLOCK.get()))
@@ -116,6 +127,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.TEST_TRAPDOOR.get());
 
                     }).build());
+
+
 
     public static final RegistryObject<CreativeModeTab> MOD_SPAWN_TAB = CREATIVE_MODE_TABS.register(
             "mod_spawn_tab", () -> CreativeModeTab.builder().icon(

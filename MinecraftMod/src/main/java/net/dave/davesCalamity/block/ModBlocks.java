@@ -1,9 +1,7 @@
 package net.dave.davesCalamity.block;
 
 import net.dave.davesCalamity.DavesCalamity;
-import net.dave.davesCalamity.block.custom.HopsCrop;
-import net.dave.davesCalamity.block.custom.MagicBlock;
-import net.dave.davesCalamity.block.custom.MandrakeCrop;
+import net.dave.davesCalamity.block.custom.*;
 import net.dave.davesCalamity.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -23,8 +21,6 @@ import java.util.function.Supplier;
 
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, DavesCalamity.MOD_ID);
-
-    public static final RegistryObject<Block> MAGIC_BLOCK = registerBlock("magic_block", () -> new MagicBlock(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops().noLootTable()));
 
     // Ores
     public static final RegistryObject<Block> ALUMINIUM_ORE = registerBlock("aluminium_ore", () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of()
@@ -105,8 +101,16 @@ public class ModBlocks {
                     .sound(SoundType.CROP)
                     .pushReaction(PushReaction.DESTROY)));
 
+    // 2D Cross blocks
+
+    public static final RegistryObject<Block> BLOOMING_CACTUS = registerBlock("blooming_cactus", () -> new BloomingCactusBlock(BlockBehaviour.Properties.of()));
+    public static final RegistryObject<Block> SMALL_CACTUS = registerBlock("small_cactus", () -> new SmallCactusBlock(BlockBehaviour.Properties.of()));
+
 
     // Tutorial
+    public static final RegistryObject<Block> MAGIC_BLOCK = registerBlock("magic_block", () -> new MagicBlock(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops().noLootTable()));
+
+
     public static final RegistryObject<StairBlock> TEST_STAIR = registerBlock("test_stair", () -> new StairBlock(
             ModBlocks.BRONZE_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops()));
 

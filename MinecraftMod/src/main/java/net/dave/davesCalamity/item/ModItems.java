@@ -54,7 +54,7 @@ public class ModItems {
     public static final RegistryObject<Item> MANDRAKE = ITEMS.register("mandrake", () -> new Item(new Item.Properties()));
 
     // Fuel
-    public static final RegistryObject<Item> FUEL = ITEMS.register("fuel", () -> new CokeItem(new Item.Properties(), 1200));
+    public static final RegistryObject<Item> COKE = ITEMS.register("coke", () -> new CokeItem(new Item.Properties(), 1200));
 
     // Seeds
     public static final RegistryObject<Item> HOPS_SEED = ITEMS.register("hops_seeds",

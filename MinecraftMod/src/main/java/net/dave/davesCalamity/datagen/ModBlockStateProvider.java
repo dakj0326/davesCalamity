@@ -52,6 +52,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.TUNGSTEN_ORE);
 
 
+
+        crossBlock(ModBlocks.BLOOMING_CACTUS);
+        crossBlock(ModBlocks.SMALL_CACTUS);
+
         // Testing
 
         stairsBlock(ModBlocks.TEST_STAIR.get(), blockTexture(ModBlocks.TUNGSTEN_BLOCK.get()));
@@ -94,6 +98,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
                         .renderType("cutout")
         );
         return models;
+    }
+
+    private void crossBlock(RegistryObject<? extends Block>  block) {
+        simpleBlock(block.get(),
+                models().cross(blockTexture(block.get()).getPath(),
+                                blockTexture(block.get()))
+                        .renderType("cutout"));  // important for transparency
+
+        blockItem(block);
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
