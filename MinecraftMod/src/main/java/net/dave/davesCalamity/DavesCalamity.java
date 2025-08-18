@@ -1,6 +1,7 @@
 package net.dave.davesCalamity;
 
 import com.mojang.logging.LogUtils;
+import net.dave.davesCalamity.armor.ModArmorMaterials;
 import net.dave.davesCalamity.block.ModBlocks;
 import net.dave.davesCalamity.component.ModDataComponent;
 import net.dave.davesCalamity.entity.ModEntities;
@@ -49,10 +50,10 @@ public class DavesCalamity
         ModItems.register(modEventBus);
         // Blocks
         ModBlocks.register(modEventBus);
-
+        // Armor Materials
+        ModArmorMaterials.ARMOR_MATERIALS.register(modEventBus);
         // Entities
         ModEntities.register(modEventBus);
-
         // Component
         ModDataComponent.register(modEventBus);
 

@@ -32,6 +32,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.RAW_SILVER.get());
                         output.accept(ModItems.RAW_TIN.get());
                         output.accept(ModItems.RAW_TUNGSTEN.get());
+                        output.accept(ModItems.PURPLE_GARNET.get());
+
                     }).build());
 
     public static final RegistryObject<CreativeModeTab> MOD_BLOCKS_TAB = CREATIVE_MODE_TABS.register(
@@ -50,6 +52,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.DEEPSLATE_TUNGSTEN_ORE.get());
                         output.accept(ModBlocks.DEEPSLATE_SILVER_ORE.get());
                         output.accept(ModBlocks.DEEPSLATE_TIN_ORE.get());
+                        output.accept(ModBlocks.DEEPSLATE_PURPLE_GARNET_ORE.get());
                         output.accept(ModBlocks.RAW_ALUMINIUM_BLOCK.get());
                         output.accept(ModBlocks.RAW_SILVER_BLOCK.get());
                         output.accept(ModBlocks.RAW_TIN_BLOCK.get());

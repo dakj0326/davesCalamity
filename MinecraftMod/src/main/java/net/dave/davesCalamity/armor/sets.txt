@@ -1,0 +1,22 @@
+
+
+Heavy Armor:
+    - Silver Bronze
+    - Iron
+    - Steel
+    - Netherite
+
+Light Armor:
+    - Tin
+    - Bronze
+    - Aluminium
+    - Diamond
+
+Ranged:
+    - Leather
+
+
+Special
+    - Gold
+    - Tungsten
+    - Silver

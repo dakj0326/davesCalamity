@@ -24,6 +24,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.BRONZE_HOE.get());
         basicItem(ModItems.BRONZE_INGOT.get());
         basicItem(ModItems.BRONZE_PICKAXE.get());
+        basicItem(ModItems.PURPLE_GARNET.get());
         basicItem(ModItems.RAW_ALUMINIUM.get());
         basicItem(ModItems.RAW_SILVER.get());
         basicItem(ModItems.RAW_TIN.get());

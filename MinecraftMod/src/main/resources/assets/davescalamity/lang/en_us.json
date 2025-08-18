@@ -3,8 +3,8 @@
   "block.davescalamity.aluminium_ore": "Aluminium Ore",
   "block.davescalamity.bronze_block": "Bronze Block",
   "block.davescalamity.blooming_cactus": "Blooming Cactus",
-  "block.davescalamity.small_cactus": "Small Cactus",
   "block.davescalamity.deepslate_aluminium_ore": "Deepslate Aluminium Ore",
+  "block.davescalamity.deepslate_purple_garnet_ore": "Deepslate Purple Garnet Ore",
   "block.davescalamity.deepslate_silver_ore": "Deepslate Silver Ore",
   "block.davescalamity.deepslate_tin_ore": "Deepslate Tin Ore",
   "block.davescalamity.deepslate_tungsten_ore": "Deepslate Tungsten Ore",
@@ -16,12 +16,14 @@
   "block.davescalamity.raw_tungsten_block": "Raw Tungsten Block",
   "block.davescalamity.silver_block": "Silver Block",
   "block.davescalamity.silver_ore": "Silver Ore",
+  "block.davescalamity.small_cactus": "Small Cactus",
   "block.davescalamity.steel_block": "Steel Block",
   "block.davescalamity.strong_bronze_block": "Silver Bronze Block",
   "block.davescalamity.tin_block": "Tin Block",
   "block.davescalamity.tin_ore": "Tin Ore",
   "block.davescalamity.tungsten_block": "Tungsten Block",
   "block.davescalamity.tungsten_ore": "Tungsten Ore",
+
 
 
 
@@ -50,6 +52,7 @@
   "item.davescalamity.mandrake": "Mandrake",
   "item.davescalamity.mandrake_root": "Mandrake Root",
   "item.davescalamity.mango": "Mango",
+  "item.davescalamity.purple_garnet": "Purple Garnet",
   "item.davescalamity.raw_aluminium": "Raw Aluminium",
   "item.davescalamity.raw_silver": "Raw Silver",
   "item.davescalamity.raw_tin": "Raw Tin",

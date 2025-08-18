@@ -47,18 +47,31 @@ public class ModWorldGenProvider extends DatapackBuiltinEntriesProvider {
         registerStoneOre(ctx, "tin_ore_vein", ModBlocks.TIN_ORE.get(), 9);
         registerStoneOre(ctx, "aluminium_ore_vein", ModBlocks.ALUMINIUM_ORE.get(), 6);
         registerStoneOre(ctx, "tungsten_ore_vein", ModBlocks.TUNGSTEN_ORE.get(), 4);
+        registerDeepslateOre(ctx, "deepslate_tin_ore_vein", ModBlocks.DEEPSLATE_TIN_ORE.get(), 9);
+        registerDeepslateOre(ctx, "deepslate_aluminium_ore_vein", ModBlocks.DEEPSLATE_ALUMINIUM_ORE.get(), 6);
+        registerDeepslateOre(ctx, "deepslate_tungsten_ore_vein", ModBlocks.DEEPSLATE_TUNGSTEN_ORE.get(), 4);
+        registerDeepslateOre(ctx, "deepslate_purple_garnet_ore_vein", ModBlocks.DEEPSLATE_PURPLE_GARNET_ORE.get(), 5);
     }
 
     private static void bootstrapPlaced(BootstrapContext<PlacedFeature> ctx) {
         placeOre(ctx, "tin_ore_vein", 10, 0, 52);
         placeOre(ctx, "aluminium_ore_vein", 8, 0, 45);
         placeOre(ctx, "tungsten_ore_vein", 6, 0, 40);
+        placeOre(ctx, "deepslate_tin_ore_vein", 10, -64, 0);
+        placeOre(ctx, "deepslate_aluminium_ore_vein", 8, -64, 0);
+        placeOre(ctx, "deepslate_tungsten_ore_vein", 6, -64, 0);
+        placeOre(ctx, "deepslate_purple_garnet_ore_vein", 1, -64, -32);
     }
 
     private static void bootstrapBiomeModifiers(BootstrapContext<BiomeModifier> ctx) {
         BiomeModifierForOre(ctx, "tin_ore_vein", "add_tin_ore");
         BiomeModifierForOre(ctx, "aluminium_ore_vein", "add_aluminium_ore");
         BiomeModifierForOre(ctx, "tungsten_ore_vein", "add_tungsten_ore");
+        BiomeModifierForOre(ctx, "deepslate_tin_ore_vein", "add_deepslate_tin_ore");
+        BiomeModifierForOre(ctx, "deepslate_aluminium_ore_vein", "add_deepslate_aluminium_ore");
+        BiomeModifierForOre(ctx, "deepslate_tungsten_ore_vein", "add_deepslate_tungsten_ore");
+        BiomeModifierForOre(ctx, "deepslate_purple_garnet_ore_vein", "add_deepslate_purple_garnet_ore");
+
     }
 
     private static void BiomeModifierForOre(BootstrapContext<BiomeModifier> ctx, String placedName, String addName) {
