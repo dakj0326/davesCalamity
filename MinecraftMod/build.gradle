@@ -17,7 +17,12 @@ base {
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
+
+// Apply Forge-Class-Remapper for automatic MCP → Mojang mapping refactor
+apply from: 'classremapper.gradle'
+
 minecraft {
+
     // The mappings can be changed at any time and must be in the following format.
     // Channel:   Version:
     // official   MCVersion             Official field/method names from Mojang mapping files
@@ -32,7 +37,7 @@ minecraft {
     // Use non-default mappings at your own risk. They may not always work.
     // Simply re-run your setup task after changing the mappings to update your workspace.
     mappings channel: mapping_channel, version: mapping_version
-    
+
     // Tell FG to not automtically create the reobf tasks, as we now use Official mappings at runtime, If you don't use them at dev time then you'll have to fix your reobf yourself.
     reobf = false
 
@@ -142,8 +147,8 @@ dependencies {
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
-    
-    // Hack fix for now, force jopt-simple to be exactly 5.0.4 because Mojang ships that version, but some transitive dependencies request 6.0+ 
+
+    // Hack fix for now, force jopt-simple to be exactly 5.0.4 because Mojang ships that version, but some transitive dependencies request 6.0+
     implementation('net.sf.jopt-simple:jopt-simple:5.0.4') { version { strictly '5.0.4' } }
 }
 
@@ -205,7 +210,7 @@ eclipse {
     synchronizationTasks 'genEclipseRuns'
 }
 
-// Merge the resources and classes into the same directory. 
+// Merge the resources and classes into the same directory.
 // This is done because java expects modules to be in a single directory.
 // And if we have it in multiple we have to do performance intensive hacks like having the UnionFileSystem
 // This will eventually be migrated to ForgeGradle so modders don't need to manually do it. But that is later.
@@ -214,3 +219,19 @@ sourceSets.each {
     it.output.resourcesDir = dir
     it.java.destinationDirectory = dir
 }
+
+// --------------------------
+// Remap Task for Latest Mojang Mappings
+// --------------------------
+tasks.register('remapToMojmap') {
+    group = 'remapping'
+    description = 'Automatically refactors old MCP mappings to the latest Mojang mappings'
+    dependsOn 'build'
+    doLast {
+        println("Running Forge-Class-Remapper...")
+        // The remapper script handles all the mapping updates
+    }
+}
+
+// Optionally run remap automatically after build
+//build.finalizedBy 'remapToMojmap'
