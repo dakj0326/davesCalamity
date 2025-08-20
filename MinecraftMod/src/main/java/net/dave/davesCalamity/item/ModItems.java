@@ -1,18 +1,17 @@
 package net.dave.davesCalamity.item;
 
 import net.dave.davesCalamity.DavesCalamity;
+import net.dave.davesCalamity.armor.ModArmorMaterials;
 import net.dave.davesCalamity.item.custom.CokeItem;
 import net.dave.davesCalamity.block.ModBlocks;
 import net.dave.davesCalamity.entity.ModEntities;
 import net.dave.davesCalamity.item.custom.ChiselItem;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraftforge.common.ForgeSpawnEggItem;
-import net.minecraftforge.common.ForgeTier;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -38,6 +37,65 @@ public class ModItems {
     public static final RegistryObject<Item> RAW_TIN = ITEMS.register("raw_tin", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> RAW_TUNGSTEN = ITEMS.register("raw_tungsten", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> PURPLE_GARNET = ITEMS.register("purple_garnet", () -> new Item(new Item.Properties()));
+
+    // Armors
+    public static final RegistryObject<Item> TIN_HELMET = ITEMS.register("tin_helmet",
+            () -> new ArmorItem(ModArmorMaterials.TIN.getHolder().get(), ArmorItem.Type.HELMET, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> TIN_CHESTPLATE = ITEMS.register("tin_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.TIN.getHolder().get(), ArmorItem.Type.CHESTPLATE, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> TIN_LEGGINGS = ITEMS.register("tin_leggings",
+            () -> new ArmorItem(ModArmorMaterials.TIN.getHolder().get(), ArmorItem.Type.LEGGINGS, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> TIN_BOOTS = ITEMS.register("tin_boots",
+            () -> new ArmorItem(ModArmorMaterials.TIN.getHolder().get(), ArmorItem.Type.BOOTS, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> ALUMINIUM_HELMET = ITEMS.register("aluminium_helmet",
+            () -> new ArmorItem(ModArmorMaterials.ALUMINIUM.getHolder().get(), ArmorItem.Type.HELMET, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> ALUMINIUM_CHESTPLATE = ITEMS.register("aluminium_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.ALUMINIUM.getHolder().get(), ArmorItem.Type.CHESTPLATE, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> ALUMINIUM_LEGGINGS = ITEMS.register("aluminium_leggings",
+            () -> new ArmorItem(ModArmorMaterials.ALUMINIUM.getHolder().get(), ArmorItem.Type.LEGGINGS, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> ALUMINIUM_BOOTS = ITEMS.register("aluminium_boots",
+            () -> new ArmorItem(ModArmorMaterials.ALUMINIUM.getHolder().get(), ArmorItem.Type.BOOTS, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> BRONZE_HELMET = ITEMS.register("bronze_helmet",
+            () -> new ArmorItem(ModArmorMaterials.BRONZE.getHolder().get(), ArmorItem.Type.HELMET, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> BRONZE_CHESTPLATE = ITEMS.register("bronze_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.BRONZE.getHolder().get(), ArmorItem.Type.CHESTPLATE, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> BRONZE_LEGGINGS = ITEMS.register("bronze_leggings",
+            () -> new ArmorItem(ModArmorMaterials.BRONZE.getHolder().get(), ArmorItem.Type.LEGGINGS, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> BRONZE_BOOTS = ITEMS.register("bronze_boots",
+            () -> new ArmorItem(ModArmorMaterials.BRONZE.getHolder().get(), ArmorItem.Type.BOOTS, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> STRONG_BRONZE_HELMET = ITEMS.register("strong_bronze_helmet",
+            () -> new ArmorItem(ModArmorMaterials.STRONG_BRONZE.getHolder().get(), ArmorItem.Type.HELMET, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> STRONG_BRONZE_CHESTPLATE = ITEMS.register("strong_bronze_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.STRONG_BRONZE.getHolder().get(), ArmorItem.Type.CHESTPLATE, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> STRONG_BRONZE_LEGGINGS = ITEMS.register("strong_bronze_leggings",
+            () -> new ArmorItem(ModArmorMaterials.STRONG_BRONZE.getHolder().get(), ArmorItem.Type.LEGGINGS, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> STRONG_BRONZE_BOOTS = ITEMS.register("strong_bronze_boots",
+            () -> new ArmorItem(ModArmorMaterials.STRONG_BRONZE.getHolder().get(), ArmorItem.Type.BOOTS, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> STEEL_HELMET = ITEMS.register("steel_helmet",
+            () -> new ArmorItem(ModArmorMaterials.STEEL.getHolder().get(), ArmorItem.Type.HELMET, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> STEEL_CHESTPLATE = ITEMS.register("steel_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.STEEL.getHolder().get(), ArmorItem.Type.CHESTPLATE, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> STEEL_LEGGINGS = ITEMS.register("steel_leggings",
+            () -> new ArmorItem(ModArmorMaterials.STEEL.getHolder().get(), ArmorItem.Type.LEGGINGS, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> STEEL_BOOTS = ITEMS.register("steel_boots",
+            () -> new ArmorItem(ModArmorMaterials.STEEL.getHolder().get(), ArmorItem.Type.BOOTS, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> TUNGSTEN_HELMET = ITEMS.register("tungsten_helmet",
+            () -> new ArmorItem(ModArmorMaterials.TUNGSTEN.getHolder().get(), ArmorItem.Type.HELMET, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> TUNGSTEN_CHESTPLATE = ITEMS.register("tungsten_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.TUNGSTEN.getHolder().get(), ArmorItem.Type.CHESTPLATE, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> TUNGSTEN_LEGGINGS = ITEMS.register("tungsten_leggings",
+            () -> new ArmorItem(ModArmorMaterials.TUNGSTEN.getHolder().get(), ArmorItem.Type.LEGGINGS, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> TUNGSTEN_BOOTS = ITEMS.register("tungsten_boots",
+            () -> new ArmorItem(ModArmorMaterials.TUNGSTEN.getHolder().get(), ArmorItem.Type.BOOTS, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> SILVER_HELMET = ITEMS.register("silver_helmet",
+            () -> new ArmorItem(ModArmorMaterials.SILVER.getHolder().get(), ArmorItem.Type.HELMET, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> SILVER_CHESTPLATE = ITEMS.register("silver_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.SILVER.getHolder().get(), ArmorItem.Type.CHESTPLATE, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> SILVER_LEGGINGS = ITEMS.register("silver_leggings",
+            () -> new ArmorItem(ModArmorMaterials.SILVER.getHolder().get(), ArmorItem.Type.LEGGINGS, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> SILVER_BOOTS = ITEMS.register("silver_boots",
+            () -> new ArmorItem(ModArmorMaterials.SILVER.getHolder().get(), ArmorItem.Type.BOOTS, new Item.Properties().stacksTo(1)));
+
 
     // Tools
     public static final RegistryObject<Item> CHISEL = ITEMS.register("chisel", () -> new ChiselItem(new Item.Properties().durability(32)));

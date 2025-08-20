@@ -26,7 +26,6 @@
 
 
 
-
   "creativetab.davescalamity.mod_items": "Mod Items",
   "creativetab.davescalamity.mod_blocks": "Mod Blocks",
   "creativetab.davescalamity.mod_foods": "Mod Foods",
@@ -35,17 +34,25 @@
 
 
 
+  "entity.davescalamity.mandrake": "Mandrake",
+
+
+
+  "item.davescalamity.aluminium_boots": "Aluminium Boots",
+  "item.davescalamity.aluminium_chestplate": "Aluminium Chestplate",
+  "item.davescalamity.aluminium_helmet": "Aluminium Helmet",
   "item.davescalamity.aluminium_ingot": "Aluminium Ingot",
+  "item.davescalamity.aluminium_leggings": "Aluminium Leggings",
   "item.davescalamity.bronze_axe": "Bronze Axe",
+  "item.davescalamity.bronze_boots": "Bronze Boots",
+  "item.davescalamity.bronze_chestplate": "Bronze Chestplate",
+  "item.davescalamity.bronze_helmet": "Bronze Helmet",
   "item.davescalamity.bronze_hoe": "Bronze Hoe",
   "item.davescalamity.bronze_ingot": "Bronze Ingot",
+  "item.davescalamity.bronze_leggings": "Bronze Leggings",
   "item.davescalamity.bronze_pickaxe": "Bronze Pickaxe",
   "item.davescalamity.cabbage": "Cabbage",
   "item.davescalamity.coke": "Coke",
-  "item.davescalamity.deepslate_aluminium": "Deepslate Aluminium Ore",
-  "item.davescalamity.deepslate_silver": "Deepslate Silver Ore",
-  "item.davescalamity.deepslate_tin": "Deepslate Tin Ore",
-  "item.davescalamity.deepslate_tungsten": "Deepslate Tungsten Ore",
   "item.davescalamity.hops": "Hops",
   "item.davescalamity.hops_seeds": "Hops Seeds",
   "item.davescalamity.mandrake_spawn_egg": "Mandrake Spawn Egg",
@@ -57,19 +64,39 @@
   "item.davescalamity.raw_silver": "Raw Silver",
   "item.davescalamity.raw_tin": "Raw Tin",
   "item.davescalamity.raw_tungsten": "Raw Tungsten",
+  "item.davescalamity.silver_boots": "Silver Boots",
+  "item.davescalamity.silver_chestplate": "Silver Chestplate",
+  "item.davescalamity.silver_helmet": "Silver Helmet",
   "item.davescalamity.silver_ingot": "Silver Ingot",
-  "item.davescalamity.steel_axe": "Steel Axe",
-  "item.davescalamity.steel_hoe": "Steel Hoe",
-  "item.davescalamity.steel_ingot": "Steel Ingot",
-  "item.davescalamity.steel_pickaxe": "Steel Pickaxe",
+  "item.davescalamity.silver_leggings": "Silver Leggings",
   "item.davescalamity.strong_bronze_axe": "Silver Bronze Axe",
+  "item.davescalamity.strong_bronze_boots": "Silver Bronze Boots",
+  "item.davescalamity.strong_bronze_chestplate": "Silver Bronze Chestplate",
+  "item.davescalamity.strong_bronze_helmet": "Silver Bronze Helmet",
   "item.davescalamity.strong_bronze_hoe": "Silver Bronze Hoe",
   "item.davescalamity.strong_bronze_ingot": "Silver Bronze Ingot",
+  "item.davescalamity.strong_bronze_leggings": "Silver Bronze Leggings",
   "item.davescalamity.strong_bronze_pickaxe": "Silver Bronze Pickaxe",
+  "item.davescalamity.steel_axe": "Steel Axe",
+  "item.davescalamity.steel_boots": "Steel Boots",
+  "item.davescalamity.steel_chestplate": "Steel Chestplate",
+  "item.davescalamity.steel_helmet": "Steel Helmet",
+  "item.davescalamity.steel_hoe": "Steel Hoe",
+  "item.davescalamity.steel_ingot": "Steel Ingot",
+  "item.davescalamity.steel_leggings": "Steel Leggings",
+  "item.davescalamity.steel_pickaxe": "Steel Pickaxe",
+  "item.davescalamity.tin_boots": "Tin Boots",
+  "item.davescalamity.tin_chestplate": "Tin Chestplate",
+  "item.davescalamity.tin_helmet": "Tin Helmet",
   "item.davescalamity.tin_ingot": "Tin Ingot",
+  "item.davescalamity.tin_leggings": "Tin Leggings",
+  "item.davescalamity.tungsten_boots": "Tungsten Boots",
+  "item.davescalamity.tungsten_chestplate": "Tungsten Chestplate",
+  "item.davescalamity.tungsten_helmet": "Tungsten Helmet",
   "item.davescalamity.tungsten_ingot": "Tungsten Ingot",
+  "item.davescalamity.tungsten_leggings": "Tungsten Leggings",
 
-  "entity.davescalamity.mandrake": "Mandrake",
+
 
 
 

@@ -99,6 +99,35 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.BRONZE_HOE.get());
                         output.accept(ModItems.STRONG_BRONZE_HOE.get());
                         output.accept(ModItems.STEEL_HOE.get());
+                        output.accept(ModItems.TIN_HELMET.get());
+                        output.accept(ModItems.TIN_CHESTPLATE.get());
+                        output.accept(ModItems.TIN_LEGGINGS.get());
+                        output.accept(ModItems.TIN_BOOTS.get());
+                        output.accept(ModItems.ALUMINIUM_HELMET.get());
+                        output.accept(ModItems.ALUMINIUM_CHESTPLATE.get());
+                        output.accept(ModItems.ALUMINIUM_LEGGINGS.get());
+                        output.accept(ModItems.ALUMINIUM_BOOTS.get());
+                        output.accept(ModItems.BRONZE_HELMET.get());
+                        output.accept(ModItems.BRONZE_CHESTPLATE.get());
+                        output.accept(ModItems.BRONZE_LEGGINGS.get());
+                        output.accept(ModItems.BRONZE_BOOTS.get());
+                        output.accept(ModItems.STRONG_BRONZE_HELMET.get());
+                        output.accept(ModItems.STRONG_BRONZE_CHESTPLATE.get());
+                        output.accept(ModItems.STRONG_BRONZE_LEGGINGS.get());
+                        output.accept(ModItems.STRONG_BRONZE_BOOTS.get());
+                        output.accept(ModItems.STEEL_HELMET.get());
+                        output.accept(ModItems.STEEL_CHESTPLATE.get());
+                        output.accept(ModItems.STEEL_LEGGINGS.get());
+                        output.accept(ModItems.STEEL_BOOTS.get());
+                        output.accept(ModItems.TUNGSTEN_HELMET.get());
+                        output.accept(ModItems.TUNGSTEN_CHESTPLATE.get());
+                        output.accept(ModItems.TUNGSTEN_LEGGINGS.get());
+                        output.accept(ModItems.TUNGSTEN_BOOTS.get());
+                        output.accept(ModItems.SILVER_HELMET.get());
+                        output.accept(ModItems.SILVER_CHESTPLATE.get());
+                        output.accept(ModItems.SILVER_LEGGINGS.get());
+                        output.accept(ModItems.SILVER_BOOTS.get());
+
 
                     }).build());
 
@@ -116,7 +145,7 @@ public class ModCreativeModeTabs {
     public static final RegistryObject<CreativeModeTab> MOD_TEST_TAB = CREATIVE_MODE_TABS.register(
             "mod_test_tab", () -> CreativeModeTab.builder().icon(
                             () -> new ItemStack(ModBlocks.MAGIC_BLOCK.get()))
-                    .withTabsBefore(MOD_TOOLS_TAB.getId())
+                    .withTabsBefore(MOD_DECORATIVE_TAB.getId())
                     .title(Component.translatable("creativetab.davescalamity.mod_test"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.TEST_STAIR.get());

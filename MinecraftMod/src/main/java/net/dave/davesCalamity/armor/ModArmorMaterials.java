@@ -20,7 +20,7 @@ public class ModArmorMaterials {
             DeferredRegister.create(f_315643_, MOD_ID);
 
     // Light Armor
-    public static final RegistryObject<ArmorMaterial> TIN = ARMOR_MATERIALS.register("tin_armor", () ->
+    public static final RegistryObject<ArmorMaterial> TIN = ARMOR_MATERIALS.register("tin", () ->
             new ArmorMaterial(
                     new EnumMap<>(ArmorItem.Type.class) {{
                         put(ArmorItem.Type.HELMET, 1);
@@ -31,13 +31,13 @@ public class ModArmorMaterials {
                     13, // enchantability
                     SoundEvents.ARMOR_EQUIP_IRON, // equip sound
                     () -> Ingredient.of(ModItems.TIN_INGOT.get()), // repair ingredient
-                    List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(MOD_ID, "tin_armor"))),
+                    List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(MOD_ID, "tin"))),
                     0.0F, // toughness
                     0.0F  // knockback resistance
             )
     );
     // Light Armor
-    public static final RegistryObject<ArmorMaterial> BRONZE = ARMOR_MATERIALS.register("bronze_armor", () ->
+    public static final RegistryObject<ArmorMaterial> BRONZE = ARMOR_MATERIALS.register("bronze", () ->
             new ArmorMaterial(
                     new EnumMap<>(ArmorItem.Type.class) {{
                         put(ArmorItem.Type.HELMET, 1);
@@ -48,13 +48,13 @@ public class ModArmorMaterials {
                     15, // enchantability
                     SoundEvents.ARMOR_EQUIP_IRON, // equip sound
                     () -> Ingredient.of(ModItems.BRONZE_INGOT.get()), // repair ingredient
-                    List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(MOD_ID, "bronze_armor"))),
+                    List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(MOD_ID, "bronze"))),
                     0.0F, // toughness
                     0.0F  // knockback resistance
             )
     );
     // Light Armor
-    public static final RegistryObject<ArmorMaterial> ALUMINIUM = ARMOR_MATERIALS.register("aluminium_armor", () ->
+    public static final RegistryObject<ArmorMaterial> ALUMINIUM = ARMOR_MATERIALS.register("aluminium", () ->
             new ArmorMaterial(
                     new EnumMap<>(ArmorItem.Type.class) {{
                         put(ArmorItem.Type.HELMET, 1);
@@ -65,13 +65,13 @@ public class ModArmorMaterials {
                     17, // enchantability
                     SoundEvents.ARMOR_EQUIP_IRON, // equip sound
                     () -> Ingredient.of(ModItems.ALUMINIUM_INGOT.get()), // repair ingredient
-                    List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(MOD_ID, "aluminium_armor"))),
+                    List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(MOD_ID, "aluminium"))),
                     0.0F, // toughness
                     0.0F  // knockback resistance
             )
     );
     // Heaby Armor
-    public static final RegistryObject<ArmorMaterial> STRONG_BRONZE = ARMOR_MATERIALS.register("strong_bronze_armor", () ->
+    public static final RegistryObject<ArmorMaterial> STRONG_BRONZE = ARMOR_MATERIALS.register("strong_bronze", () ->
             new ArmorMaterial(
                     new EnumMap<>(ArmorItem.Type.class) {{
                         put(ArmorItem.Type.HELMET, 2);
@@ -82,13 +82,13 @@ public class ModArmorMaterials {
                     15, // enchantability
                     SoundEvents.ARMOR_EQUIP_IRON, // equip sound
                     () -> Ingredient.of(ModItems.STRONG_BRONZE_INGOT.get()), // repair ingredient
-                    List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(MOD_ID, "strong_bronze_armor"))),
+                    List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(MOD_ID, "strong_bronze"))),
                     0.0F, // toughness
                     0.0F  // knockback resistance
             )
     );
     // Heaby Armor
-    public static final RegistryObject<ArmorMaterial> STEEL = ARMOR_MATERIALS.register("steel_armor", () ->
+    public static final RegistryObject<ArmorMaterial> STEEL = ARMOR_MATERIALS.register("steel", () ->
             new ArmorMaterial(
                     new EnumMap<>(ArmorItem.Type.class) {{
                         put(ArmorItem.Type.HELMET, 3);
@@ -99,13 +99,13 @@ public class ModArmorMaterials {
                     15, // enchantability
                     SoundEvents.ARMOR_EQUIP_IRON, // equip sound
                     () -> Ingredient.of(ModItems.STEEL_INGOT.get()), // repair ingredient
-                    List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(MOD_ID, "steel_armor"))),
+                    List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(MOD_ID, "steel"))),
                     0.0F, // toughness
                     0.0F  // knockback resistance
             )
     );
     // Special
-    public static final RegistryObject<ArmorMaterial> TUNGSTEN = ARMOR_MATERIALS.register("tungsten_armor", () ->
+    public static final RegistryObject<ArmorMaterial> TUNGSTEN = ARMOR_MATERIALS.register("tungsten", () ->
             new ArmorMaterial(
                     new EnumMap<>(ArmorItem.Type.class) {{
                         put(ArmorItem.Type.HELMET, 3);
@@ -116,13 +116,13 @@ public class ModArmorMaterials {
                     15, // enchantability
                     SoundEvents.ARMOR_EQUIP_IRON, // equip sound
                     () -> Ingredient.of(ModItems.TUNGSTEN_INGOT.get()), // repair ingredient
-                    List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(MOD_ID, "tungsten_armor"))),
+                    List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(MOD_ID, "tungsten"))),
                     1.0F, // toughness
                     0.0F  // knockback resistance
             )
     );
     // Special
-    public static final RegistryObject<ArmorMaterial> SILVER = ARMOR_MATERIALS.register("silver_armor", () ->
+    public static final RegistryObject<ArmorMaterial> SILVER = ARMOR_MATERIALS.register("silver", () ->
             new ArmorMaterial(
                     new EnumMap<>(ArmorItem.Type.class) {{
                         put(ArmorItem.Type.HELMET, 1);
@@ -133,7 +133,7 @@ public class ModArmorMaterials {
                     22, // enchantability
                     SoundEvents.ARMOR_EQUIP_IRON, // equip sound
                     () -> Ingredient.of(ModItems.SILVER_INGOT.get()), // repair ingredient
-                    List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(MOD_ID, "silver_armor"))),
+                    List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(MOD_ID, "silver"))),
                     1.0F, // toughness
                     0.0F  // knockback resistance
             )
