@@ -1,4 +1,4 @@
-package net.dave.davesCalamity.entity.client;// Save this class in your mod and generate all required imports
+package net.dave.davesCalamity.entity.client.Mandrake;// Save this class in your mod and generate all required imports
 
 import net.minecraft.client.animation.AnimationChannel;
 import net.minecraft.client.animation.AnimationDefinition;

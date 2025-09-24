@@ -41,28 +41,31 @@ public class SetBonusManager {
             boolean fullset = ac.m_40401_().value() == material && al.m_40401_().value() == material && af.m_40401_().value() == material;
 
             if (fullset) {
-                System.out.println("full set is found");
-                System.out.println("this is new detected key: " + ArmorSetKeys.keyForMaterial(material));
                 return ArmorSetKeys.keyForMaterial(material);
             }
         }
-        System.out.println("Should not be here");
         return null;
     }
 
     private void applyBonusForKey(ServerPlayer player, String key) {
-        MobEffectInstance effect = ArmorSetBonuses.effectForKey(key);
-        if (effect != null) {
-            System.out.println("effect is found");
+        var effects = ArmorSetBonuses.effectsForKey(key);
+        for (MobEffectInstance effect : effects) {
             player.addEffect(new MobEffectInstance(
-                    effect.getEffect(), Integer.MAX_VALUE, effect.getAmplifier(), true, true, true));
+                    effect.getEffect(),
+                    Integer.MAX_VALUE, // make it effectively permanent while wearing
+                    effect.getAmplifier(),
+                    true,  // ambient
+                    true,  // show particles
+                    true   // show icon
+            ));
         }
     }
 
     private void removeCurrentBonus(ServerPlayer player) {
         if (activeKey == null) return;
-        var effect = ArmorSetBonuses.effectForKey(activeKey);
-        if (effect != null) {
+
+        var effects = ArmorSetBonuses.effectsForKey(activeKey);
+        for (MobEffectInstance effect : effects) {
             player.removeEffect(effect.getEffect());
         }
     }

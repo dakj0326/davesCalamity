@@ -106,18 +106,30 @@ public class ModItems {
             .attributes(createToolAttributes(ModToolTiers.BRONZE, 7.0F, -3.2F))));
     public static final RegistryObject<Item> BRONZE_PICKAXE = ITEMS.register("bronze_pickaxe", () -> new PickaxeItem(ModToolTiers.BRONZE, new Item.Properties()
             .attributes(createToolAttributes(ModToolTiers.BRONZE, 2.0F, -2.8F))));
+    public static final RegistryObject<Item> BRONZE_SHOVEL = ITEMS.register("bronze_shovel", () -> new ShovelItem(ModToolTiers.BRONZE, new Item.Properties()
+            .attributes(createToolAttributes(ModToolTiers.BRONZE, 2.0F, -2.8F))));
+    public static final RegistryObject<Item> BRONZE_SWORD = ITEMS.register("bronze_sword", () -> new SwordItem(ModToolTiers.BRONZE, new Item.Properties()
+            .attributes(createToolAttributes(ModToolTiers.BRONZE, 5.0F, -2.8F))));
     public static final RegistryObject<Item> STRONG_BRONZE_AXE = ITEMS.register("strong_bronze_axe", () -> new AxeItem(ModToolTiers.STRONG_BRONZE, new Item.Properties()
             .attributes(createToolAttributes(ModToolTiers.STRONG_BRONZE, 7.0F, -3.2F))));
     public static final RegistryObject<Item> STRONG_BRONZE_HOE = ITEMS.register("strong_bronze_hoe", () -> new HoeItem(ModToolTiers.STRONG_BRONZE, new Item.Properties()
             .attributes(createToolAttributes(ModToolTiers.STRONG_BRONZE, -1.0F, 0.F))));
     public static final RegistryObject<Item> STRONG_BRONZE_PICKAXE = ITEMS.register("strong_bronze_pickaxe", () -> new PickaxeItem(ModToolTiers.STRONG_BRONZE, new Item.Properties()
             .attributes(createToolAttributes(ModToolTiers.STRONG_BRONZE, 2.0F, -2.8F))));
+    public static final RegistryObject<Item> STRONG_BRONZE_SHOVEL = ITEMS.register("strong_bronze_shovel", () -> new ShovelItem(ModToolTiers.STRONG_BRONZE, new Item.Properties()
+            .attributes(createToolAttributes(ModToolTiers.STRONG_BRONZE, 2.0F, -2.8F))));
+    public static final RegistryObject<Item> STRONG_BRONZE_SWORD = ITEMS.register("strong_bronze_sword", () -> new SwordItem(ModToolTiers.STRONG_BRONZE, new Item.Properties()
+            .attributes(createToolAttributes(ModToolTiers.STRONG_BRONZE, 5.5F, -2.8F))));
     public static final RegistryObject<Item> STEEL_AXE = ITEMS.register("steel_axe", () -> new AxeItem(ModToolTiers.STEEL, new Item.Properties()
             .attributes(createToolAttributes(ModToolTiers.STEEL, 7.0F, -3.0F))));
     public static final RegistryObject<Item> STEEL_HOE = ITEMS.register("steel_hoe", () -> new HoeItem(ModToolTiers.STEEL, new Item.Properties()
             .attributes(createToolAttributes(ModToolTiers.STEEL, -1.0F, 0.F))));
     public static final RegistryObject<Item> STEEL_PICKAXE = ITEMS.register("steel_pickaxe", () -> new PickaxeItem(ModToolTiers.STEEL, new Item.Properties()
             .attributes(createToolAttributes(ModToolTiers.STEEL, 2.0F, -2.8F))));
+    public static final RegistryObject<Item> STEEL_SHOVEL = ITEMS.register("steel_shovel", () -> new ShovelItem(ModToolTiers.STEEL, new Item.Properties()
+            .attributes(createToolAttributes(ModToolTiers.STEEL, 2.0F, -2.8F))));
+    public static final RegistryObject<Item> STEEL_SWORD = ITEMS.register("steel_sword", () -> new SwordItem(ModToolTiers.STEEL, new Item.Properties()
+            .attributes(createToolAttributes(ModToolTiers.STEEL, 6.5F, -2.8F))));
 
     // Foods
     public static final RegistryObject<Item> CABBAGE = ITEMS.register("cabbage", () -> new Item(new Item.Properties().food(ModFoodProperties.CABBAGE)));

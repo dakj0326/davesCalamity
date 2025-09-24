@@ -4,8 +4,10 @@ import com.mojang.logging.LogUtils;
 import net.dave.davesCalamity.armor.ModArmorMaterials;
 import net.dave.davesCalamity.block.ModBlocks;
 import net.dave.davesCalamity.component.ModDataComponent;
+import net.dave.davesCalamity.effect.ModEffects;
 import net.dave.davesCalamity.entity.ModEntities;
-import net.dave.davesCalamity.entity.client.MandrakeRenderer;
+import net.dave.davesCalamity.entity.client.Mandrake.MandrakeRenderer;
+import net.dave.davesCalamity.entity.client.Walker.ZombieWalkerRenderer;
 import net.dave.davesCalamity.item.ModCreativeModeTabs;
 import net.dave.davesCalamity.item.ModItems;
 import net.minecraft.client.renderer.entity.EntityRenderers;
@@ -44,6 +46,8 @@ public class DavesCalamity
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
+        // Effects
+        ModEffects.EFFECTS.register(modEventBus);
         // Tabs
         ModCreativeModeTabs.register(modEventBus);
         // Items
@@ -96,6 +100,7 @@ public class DavesCalamity
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             EntityRenderers.register(ModEntities.MANDRAKE.get(), MandrakeRenderer::new);
+            EntityRenderers.register(ModEntities.ZOMBIE_WALKER.get(), ZombieWalkerRenderer::new);
         }
     }
 }

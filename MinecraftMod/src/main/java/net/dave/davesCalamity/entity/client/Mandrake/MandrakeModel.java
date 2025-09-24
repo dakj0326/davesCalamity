@@ -1,10 +1,8 @@
-package net.dave.davesCalamity.entity.client;
+package net.dave.davesCalamity.entity.client.Mandrake;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import net.dave.davesCalamity.DavesCalamity;
 import net.dave.davesCalamity.entity.custom.MandrakeEntity;
-import net.minecraft.client.animation.AnimationDefinition;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;

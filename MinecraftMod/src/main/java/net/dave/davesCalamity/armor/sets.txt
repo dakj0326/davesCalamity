@@ -1,22 +1,25 @@
 
 
-Heavy Armor:
+Heavy Armor:  knockback resistance, health regen, uneasy feet
     - Silver Bronze
     - Iron
     - Steel
     - Netherite
 
-Light Armor:
+Light Armor:  swords master, (no cooldown on daggers), Deadly Percision
     - Tin
     - Bronze
     - Aluminium
     - Diamond
 
-Ranged:
+Ranged:  bows expert, percision strike, luck
     - Leather
+    - ChainMail
 
 
 Special
-    - Gold
-    - Tungsten
-    - Silver
+    - Gold: Fire reistance
+    - Tungsten: 0 knockback, thorns, tough swing
+    - Silver: More damage against undead
+
+Rouge: Berserker, dual wielding, low hp rage, life steal,

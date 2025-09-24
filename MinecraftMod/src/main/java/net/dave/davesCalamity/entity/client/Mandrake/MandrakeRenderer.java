@@ -1,4 +1,4 @@
-package net.dave.davesCalamity.entity.client;
+package net.dave.davesCalamity.entity.client.Mandrake;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.dave.davesCalamity.DavesCalamity;
@@ -14,15 +14,14 @@ public class MandrakeRenderer extends MobRenderer<MandrakeEntity, MandrakeModel<
         super(pContext, new MandrakeModel<>(pContext.bakeLayer(MandrakeModel.LAYER_LOCATION)), 0.5f);
     }
 
-
-
     @Override
     public ResourceLocation createRenderState(MandrakeEntity pEntity) {
         return ResourceLocation.fromNamespaceAndPath(DavesCalamity.MOD_ID, "textures/entity/mandrake.png");
     }
 
     @Override
-    public void render(MandrakeEntity pEntity, float pEntityYaw, float pPartialTicks, PoseStack pPoseStack, MultiBufferSource pBuffer, int pPackedLight) {
+    public void render(MandrakeEntity pEntity, float pEntityYaw, float pPartialTicks,
+                       PoseStack pPoseStack, MultiBufferSource pBuffer, int pPackedLight) {
         super.render(pEntity, pEntityYaw, pPartialTicks, pPoseStack, pBuffer, pPackedLight);
     }
 }

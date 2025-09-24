@@ -54,6 +54,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.BRONZE_HOE.get());
         basicItem(ModItems.BRONZE_INGOT.get());
         basicItem(ModItems.BRONZE_PICKAXE.get());
+        basicItem(ModItems.BRONZE_SHOVEL.get());
+        basicItem(ModItems.BRONZE_SWORD.get());
         basicItem(ModItems.CABBAGE.get());
         basicItem(ModItems.COKE.get());
         basicItem(ModItems.HOPS.get());
@@ -71,10 +73,14 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.STEEL_HOE.get());
         basicItem(ModItems.STEEL_INGOT.get());
         basicItem(ModItems.STEEL_PICKAXE.get());
+        basicItem(ModItems.STEEL_SHOVEL.get());
+        basicItem(ModItems.STEEL_SWORD.get());
         basicItem(ModItems.STRONG_BRONZE_AXE.get());
         basicItem(ModItems.STRONG_BRONZE_HOE.get());
         basicItem(ModItems.STRONG_BRONZE_INGOT.get());
         basicItem(ModItems.STRONG_BRONZE_PICKAXE.get());
+        basicItem(ModItems.STRONG_BRONZE_SHOVEL.get());
+        basicItem(ModItems.STRONG_BRONZE_SWORD.get());
         basicItem(ModItems.TIN_INGOT.get());
         basicItem(ModItems.TUNGSTEN_INGOT.get());
 

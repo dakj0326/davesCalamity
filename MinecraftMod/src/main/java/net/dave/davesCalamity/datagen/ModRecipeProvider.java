@@ -50,6 +50,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         fullBlock(ModItems.TIN_INGOT.get(), ModBlocks.TIN_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, pRecipeOutput);
         fullBlock(ModItems.TUNGSTEN_INGOT.get(), ModBlocks.TUNGSTEN_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, pRecipeOutput);
 
+
         // Tools Crafting
         pickaxe(ModItems.BRONZE_INGOT.get(), ModItems.BRONZE_PICKAXE.get(), RecipeCategory.TOOLS, pRecipeOutput);
         pickaxe(ModItems.STRONG_BRONZE_INGOT.get(), ModItems.STRONG_BRONZE_PICKAXE.get(), RecipeCategory.TOOLS, pRecipeOutput);
@@ -60,6 +61,42 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         hoe(ModItems.BRONZE_INGOT.get(), ModItems.BRONZE_HOE.get(), RecipeCategory.TOOLS, pRecipeOutput);
         hoe(ModItems.STRONG_BRONZE_INGOT.get(), ModItems.STRONG_BRONZE_HOE.get(), RecipeCategory.TOOLS, pRecipeOutput);
         hoe(ModItems.STEEL_INGOT.get(), ModItems.STEEL_HOE.get(), RecipeCategory.TOOLS, pRecipeOutput);
+        shovel(ModItems.BRONZE_INGOT.get(), ModItems.BRONZE_SHOVEL.get(), RecipeCategory.TOOLS, pRecipeOutput);
+        shovel(ModItems.STRONG_BRONZE_INGOT.get(), ModItems.STRONG_BRONZE_SHOVEL.get(), RecipeCategory.TOOLS, pRecipeOutput);
+        shovel(ModItems.STEEL_INGOT.get(), ModItems.STEEL_SHOVEL.get(), RecipeCategory.TOOLS, pRecipeOutput);
+        sword(ModItems.BRONZE_INGOT.get(), ModItems.BRONZE_SWORD.get(), RecipeCategory.TOOLS, pRecipeOutput);
+        sword(ModItems.STRONG_BRONZE_INGOT.get(), ModItems.STRONG_BRONZE_SWORD.get(), RecipeCategory.TOOLS, pRecipeOutput);
+        sword(ModItems.STEEL_INGOT.get(), ModItems.STEEL_SWORD.get(), RecipeCategory.TOOLS, pRecipeOutput);
+
+        // Armor
+        helmet(ModItems.ALUMINIUM_INGOT.get(), ModItems.ALUMINIUM_INGOT.get(), ModItems.ALUMINIUM_HELMET.get(), RecipeCategory.COMBAT, pRecipeOutput);
+        helmet(ModItems.BRONZE_INGOT.get(), ModItems.BRONZE_INGOT.get(), ModItems.BRONZE_HELMET.get(), RecipeCategory.COMBAT, pRecipeOutput);
+        helmet(ModItems.TIN_INGOT.get(), ModItems.TIN_INGOT.get(), ModItems.TIN_HELMET.get(), RecipeCategory.COMBAT, pRecipeOutput);
+        helmet(ModItems.STRONG_BRONZE_INGOT.get(), ModItems.STRONG_BRONZE_INGOT.get(), ModItems.STRONG_BRONZE_HELMET.get(), RecipeCategory.COMBAT, pRecipeOutput);
+        helmet(ModItems.SILVER_INGOT.get(), ModItems.PURPLE_GARNET.get(), ModItems.SILVER_HELMET.get(), RecipeCategory.COMBAT, pRecipeOutput);
+        helmet(ModItems.STEEL_INGOT.get(), ModItems.PURPLE_GARNET.get(), ModItems.STEEL_HELMET.get(), RecipeCategory.COMBAT, pRecipeOutput);
+        helmet(ModItems.TUNGSTEN_INGOT.get(), ModItems.TUNGSTEN_INGOT.get(), ModItems.TUNGSTEN_HELMET.get(), RecipeCategory.COMBAT, pRecipeOutput);
+        chestplate(ModItems.ALUMINIUM_INGOT.get(), ModItems.ALUMINIUM_INGOT.get(), ModItems.ALUMINIUM_CHESTPLATE.get(), RecipeCategory.COMBAT, pRecipeOutput);
+        chestplate(ModItems.BRONZE_INGOT.get(), ModItems.BRONZE_INGOT.get(), ModItems.BRONZE_CHESTPLATE.get(), RecipeCategory.COMBAT, pRecipeOutput);
+        chestplate(ModItems.TIN_INGOT.get(), ModItems.TIN_INGOT.get(), ModItems.TIN_CHESTPLATE.get(), RecipeCategory.COMBAT, pRecipeOutput);
+        chestplate(ModItems.STRONG_BRONZE_INGOT.get(), ModItems.STRONG_BRONZE_INGOT.get(), ModItems.STRONG_BRONZE_CHESTPLATE.get(), RecipeCategory.COMBAT, pRecipeOutput);
+        chestplate(ModItems.SILVER_INGOT.get(), ModItems.PURPLE_GARNET.get(), ModItems.SILVER_CHESTPLATE.get(), RecipeCategory.COMBAT, pRecipeOutput);
+        chestplate(ModItems.STEEL_INGOT.get(), ModItems.PURPLE_GARNET.get(), ModItems.STEEL_CHESTPLATE.get(), RecipeCategory.COMBAT, pRecipeOutput);
+        chestplate(ModItems.TUNGSTEN_INGOT.get(), ModItems.TUNGSTEN_INGOT.get(), ModItems.TUNGSTEN_CHESTPLATE.get(), RecipeCategory.COMBAT, pRecipeOutput);
+        leggings(ModItems.ALUMINIUM_INGOT.get(), ModItems.ALUMINIUM_INGOT.get(), ModItems.ALUMINIUM_LEGGINGS.get(), RecipeCategory.COMBAT, pRecipeOutput);
+        leggings(ModItems.BRONZE_INGOT.get(), ModItems.BRONZE_INGOT.get(), ModItems.BRONZE_LEGGINGS.get(), RecipeCategory.COMBAT, pRecipeOutput);
+        leggings(ModItems.TIN_INGOT.get(), ModItems.TIN_INGOT.get(), ModItems.TIN_LEGGINGS.get(), RecipeCategory.COMBAT, pRecipeOutput);
+        leggings(ModItems.STRONG_BRONZE_INGOT.get(), ModItems.STRONG_BRONZE_INGOT.get(), ModItems.STRONG_BRONZE_LEGGINGS.get(), RecipeCategory.COMBAT, pRecipeOutput);
+        leggings(ModItems.SILVER_INGOT.get(), ModItems.PURPLE_GARNET.get(), ModItems.SILVER_LEGGINGS.get(), RecipeCategory.COMBAT, pRecipeOutput);
+        leggings(ModItems.STEEL_INGOT.get(), ModItems.PURPLE_GARNET.get(), ModItems.STEEL_LEGGINGS.get(), RecipeCategory.COMBAT, pRecipeOutput);
+        leggings(ModItems.TUNGSTEN_INGOT.get(), ModItems.TUNGSTEN_INGOT.get(), ModItems.TUNGSTEN_LEGGINGS.get(), RecipeCategory.COMBAT, pRecipeOutput);
+        boots(ModItems.ALUMINIUM_INGOT.get(), ModItems.ALUMINIUM_INGOT.get(), ModItems.ALUMINIUM_BOOTS.get(), RecipeCategory.COMBAT, pRecipeOutput);
+        boots(ModItems.BRONZE_INGOT.get(), ModItems.BRONZE_INGOT.get(), ModItems.BRONZE_BOOTS.get(), RecipeCategory.COMBAT, pRecipeOutput);
+        boots(ModItems.TIN_INGOT.get(), ModItems.TIN_INGOT.get(), ModItems.TIN_BOOTS.get(), RecipeCategory.COMBAT, pRecipeOutput);
+        boots(ModItems.STRONG_BRONZE_INGOT.get(), ModItems.STRONG_BRONZE_INGOT.get(), ModItems.STRONG_BRONZE_BOOTS.get(), RecipeCategory.COMBAT, pRecipeOutput);
+        boots(ModItems.SILVER_INGOT.get(), ModItems.PURPLE_GARNET.get(), ModItems.SILVER_BOOTS.get(), RecipeCategory.COMBAT, pRecipeOutput);
+        boots(ModItems.STEEL_INGOT.get(), ModItems.PURPLE_GARNET.get(), ModItems.STEEL_BOOTS.get(), RecipeCategory.COMBAT, pRecipeOutput);
+        boots(ModItems.TUNGSTEN_INGOT.get(), ModItems.TUNGSTEN_INGOT.get(), ModItems.TUNGSTEN_BOOTS.get(), RecipeCategory.COMBAT, pRecipeOutput);
 
 
         // Smelting
@@ -141,6 +178,43 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A', input)
                 .unlockedBy(getHasName(input), has(input)).save(recipeOutput);
     }
+    protected static void helmet(ItemLike item_1, ItemLike item_2, ItemLike output, RecipeCategory category, RecipeOutput recipeOutput) {
+        ShapedRecipeBuilder.shaped(category, output)
+                .pattern("ABA")
+                .pattern("A A")
+                .pattern("   ")
+                .define('A', item_1)
+                .define('B', item_2)
+                .unlockedBy(getHasName(item_1), has(item_1)).save(recipeOutput);
+    }
+    protected static void chestplate(ItemLike item_1, ItemLike item_2, ItemLike output, RecipeCategory category, RecipeOutput recipeOutput) {
+        ShapedRecipeBuilder.shaped(category, output)
+                .pattern("B B")
+                .pattern("ABA")
+                .pattern("AAA")
+                .define('A', item_1)
+                .define('B', item_2)
+                .unlockedBy(getHasName(item_1), has(item_1)).save(recipeOutput);
+    }
+    protected static void leggings(ItemLike item_1, ItemLike item_2, ItemLike output, RecipeCategory category, RecipeOutput recipeOutput) {
+        ShapedRecipeBuilder.shaped(category, output)
+                .pattern("AAA")
+                .pattern("B B")
+                .pattern("A A")
+                .define('A', item_1)
+                .define('B', item_2)
+                .unlockedBy(getHasName(item_1), has(item_1)).save(recipeOutput);
+    }
+    protected static void boots(ItemLike item_1, ItemLike item_2, ItemLike output, RecipeCategory category, RecipeOutput recipeOutput) {
+        ShapedRecipeBuilder.shaped(category, output)
+                .pattern("A A")
+                .pattern("B B")
+                .pattern("   ")
+                .define('A', item_1)
+                .define('B', item_2)
+                .unlockedBy(getHasName(item_1), has(item_1)).save(recipeOutput);
+    }
+
     protected static void pickaxe(ItemLike input, ItemLike output, RecipeCategory category, RecipeOutput recipeOutput) {
         ShapedRecipeBuilder.shaped(category, output)
                 .pattern("BBB")
@@ -152,8 +226,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     }
     protected static void axe(ItemLike input, ItemLike output, RecipeCategory category, RecipeOutput recipeOutput) {
         ShapedRecipeBuilder.shaped(category, output)
-                .pattern("BBB")
-                .pattern(" A ")
+                .pattern("BB ")
+                .pattern("BA ")
                 .pattern(" A ")
                 .define('A', Items.STICK)
                 .define('B', input)
@@ -161,8 +235,28 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     }
     protected static void hoe(ItemLike input, ItemLike output, RecipeCategory category, RecipeOutput recipeOutput) {
         ShapedRecipeBuilder.shaped(category, output)
-                .pattern("BBB")
+                .pattern("BB ")
                 .pattern(" A ")
+                .pattern(" A ")
+                .define('A', Items.STICK)
+                .define('B', input)
+                .unlockedBy(getHasName(input), has(input)).save(recipeOutput);
+    }
+
+    protected static void shovel(ItemLike input, ItemLike output, RecipeCategory category, RecipeOutput recipeOutput) {
+        ShapedRecipeBuilder.shaped(category, output)
+                .pattern(" B ")
+                .pattern(" A ")
+                .pattern(" A ")
+                .define('A', Items.STICK)
+                .define('B', input)
+                .unlockedBy(getHasName(input), has(input)).save(recipeOutput);
+    }
+
+    protected static void sword(ItemLike input, ItemLike output, RecipeCategory category, RecipeOutput recipeOutput) {
+        ShapedRecipeBuilder.shaped(category, output)
+                .pattern(" B ")
+                .pattern(" B ")
                 .pattern(" A ")
                 .define('A', Items.STICK)
                 .define('B', input)

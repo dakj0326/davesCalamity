@@ -15,7 +15,8 @@ public final class ArmorSetKeys {
 
     private static final Map<ResourceLocation, String> MAP = new HashMap<>();
     static {
-        MAP.put(BuiltInRegistries.f_315942_.getKey(ArmorMaterials.f_40454_.value()), "chainmail");
+        MAP.put(BuiltInRegistries.f_315942_.getKey(ArmorMaterials.f_40453_.value()), "leather");
+        MAP.put(BuiltInRegistries.f_315942_.getKey(ArmorMaterials.f_40454_.value()), "chain");
         MAP.put(BuiltInRegistries.f_315942_.getKey(ArmorMaterials.f_40455_.value()), "iron");
         MAP.put(BuiltInRegistries.f_315942_.getKey(ArmorMaterials.f_40456_.value()), "gold");
         MAP.put(BuiltInRegistries.f_315942_.getKey(ArmorMaterials.f_40457_.value()), "diamond");

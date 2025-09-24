@@ -33,6 +33,20 @@
   "creativetab.davescalamity.mod_test": "Mod Test",
 
 
+  "effect.davescalamity.burdened": "Burdened",
+  "effect.davescalamity.deadly_precision": "Deadly Precision",
+  "effect.davescalamity.heavy_stance": "Heavy Stance",
+  "effect.davescalamity.holy_strike": "Holy Strike",
+  "effect.davescalamity.longshot": "Longshot",
+  "effect.davescalamity.pinning_shot": "Pinning Shot",
+  "effect.davescalamity.planted_feet": "Planted Feet",
+  "effect.davescalamity.rooted": "Rooted",
+  "effect.davescalamity.sword_mastery": "Sword Mastery",
+  "effect.davescalamity.thorned": "Thorned",
+  "effect.davescalamity.uneasy_feet": "Uneasy Feet",
+  "effect.davescalamity.vitality": "Vitality",
+
+
 
   "entity.davescalamity.mandrake": "Mandrake",
 
@@ -51,6 +65,8 @@
   "item.davescalamity.bronze_ingot": "Bronze Ingot",
   "item.davescalamity.bronze_leggings": "Bronze Leggings",
   "item.davescalamity.bronze_pickaxe": "Bronze Pickaxe",
+  "item.davescalamity.bronze_shovel": "Bronze Shovel",
+  "item.davescalamity.bronze_sword": "Bronze Sword",
   "item.davescalamity.cabbage": "Cabbage",
   "item.davescalamity.coke": "Coke",
   "item.davescalamity.hops": "Hops",
@@ -77,6 +93,8 @@
   "item.davescalamity.strong_bronze_ingot": "Silver Bronze Ingot",
   "item.davescalamity.strong_bronze_leggings": "Silver Bronze Leggings",
   "item.davescalamity.strong_bronze_pickaxe": "Silver Bronze Pickaxe",
+  "item.davescalamity.strong_bronze_shovel": "Silver Bronze Shovel",
+  "item.davescalamity.strong_bronze_sword": "Silver Bronze Sword",
   "item.davescalamity.steel_axe": "Steel Axe",
   "item.davescalamity.steel_boots": "Steel Boots",
   "item.davescalamity.steel_chestplate": "Steel Chestplate",
@@ -85,6 +103,8 @@
   "item.davescalamity.steel_ingot": "Steel Ingot",
   "item.davescalamity.steel_leggings": "Steel Leggings",
   "item.davescalamity.steel_pickaxe": "Steel Pickaxe",
+  "item.davescalamity.steel_shovel": "Steel Shovel",
+  "item.davescalamity.steel_Sword": "Steel Sword",
   "item.davescalamity.tin_boots": "Tin Boots",
   "item.davescalamity.tin_chestplate": "Tin Chestplate",
   "item.davescalamity.tin_helmet": "Tin Helmet",
@@ -97,13 +117,6 @@
   "item.davescalamity.tungsten_leggings": "Tungsten Leggings",
 
 
-
-
-
-
-
-  
-  
 
   "block.davescalamity.magic_block": "Magic Block",
   "item.davescalamity.chisel": "Chisel"

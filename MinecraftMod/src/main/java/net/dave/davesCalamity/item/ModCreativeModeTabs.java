@@ -99,6 +99,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.BRONZE_HOE.get());
                         output.accept(ModItems.STRONG_BRONZE_HOE.get());
                         output.accept(ModItems.STEEL_HOE.get());
+                        output.accept(ModItems.BRONZE_SHOVEL.get());
+                        output.accept(ModItems.STRONG_BRONZE_SHOVEL.get());
+                        output.accept(ModItems.STEEL_SHOVEL.get());
                         output.accept(ModItems.TIN_HELMET.get());
                         output.accept(ModItems.TIN_CHESTPLATE.get());
                         output.accept(ModItems.TIN_LEGGINGS.get());
