@@ -36,6 +36,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         shapelessSingle(ModBlocks.STRONG_BRONZE_BLOCK.get(), ModItems.STRONG_BRONZE_INGOT.get(), RecipeCategory.MISC, 9, "strong_bronze_ingot_from_block", pRecipeOutput);
         shapelessSingle(ModBlocks.TIN_BLOCK.get(), ModItems.TIN_INGOT.get(), RecipeCategory.MISC, 9, "tin_ingot_from_block", pRecipeOutput);
         shapelessSingle(ModBlocks.TUNGSTEN_BLOCK.get(), ModItems.TUNGSTEN_INGOT.get(), RecipeCategory.MISC, 9, "tungsten_ingot_from_block", pRecipeOutput);
+        shapelessSingle(ModBlocks.DESERT_LILY.get(), Items.MAGENTA_DYE, RecipeCategory.MISC, 2, "magenta_dye_from_desert_lily", pRecipeOutput);
 
         // Full Block Crafting
         fullBlock(ModItems.RAW_ALUMINIUM.get(), ModBlocks.RAW_ALUMINIUM_BLOCK.get(), RecipeCategory.BUILDING_BLOCKS, pRecipeOutput);

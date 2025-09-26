@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "davescalamity:block/desert_lily",
+      "render_type": "cutout"
+    }
+  }
+}

@@ -95,27 +95,25 @@ public class ZombieWalkerModel<T extends ZombieWalkerEntity> extends Hierarchica
 						  float ageInTicks, float netHeadYaw, float headPitch) {
 		this.root.getAllParts().forEach(ModelPart::resetPose);
 
-		// --- head rotation (manual, so all anims share it)
-		this.head.yRot = netHeadYaw * ((float)Math.PI / 180F);
-		this.head.xRot = headPitch * ((float)Math.PI / 180F);
+		// Head rotation (always applied)
+		this.head.xRot = headPitch * (float)(Math.PI / 180F);
+		this.head.yRot = netHeadYaw * (float)(Math.PI / 180F);
 
-		// --- check animation priority ---
-		if (entity.transformAnimationState.isStarted()) {
-			this.m_233385_(entity.transformAnimationState, ZombieWalkerAnimations.TRANSFORM, ageInTicks, 1f);
-		}
-		else if (entity.retransformAnimationState.isStarted()) {
-			this.m_233385_(entity.retransformAnimationState, ZombieWalkerAnimations.RETRANSFORM, ageInTicks, 1f);
-		}
-		else if (entity.attackAnimationState.isStarted()) {
-			this.m_233385_(entity.attackAnimationState, ZombieWalkerAnimations.ATTACK, ageInTicks, 1f);
-		}
-		else if (entity.runAnimationState.isStarted()) {
-			this.m_233385_(entity.runAnimationState, ZombieWalkerAnimations.RUN, ageInTicks, 1f);
-		}
-		else {
-			// Default movement: walk + idle
+		// Idle is safe to always run (it blends in place)
+		this.m_233385_(entity.idleAnimationState, ZombieWalkerAnimations.IDLE, ageInTicks, 1f);
+
+		// Walking vs running
+		if (entity.isAggressive()) {
+			// Use running animation instead of walking
+			this.m_267799_(ZombieWalkerAnimations.RUN, limbSwing, limbSwingAmount, 2f, 2.5f); // bump speed if needed
+		} else {
+			// Normal walking cycle
 			this.m_267799_(ZombieWalkerAnimations.WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
-			this.m_233385_(entity.idleAnimationState, ZombieWalkerAnimations.IDLE, ageInTicks, 1f);
 		}
+
+		// Special one-shots
+		this.m_233385_(entity.transformAnimationState, ZombieWalkerAnimations.TRANSFORM, ageInTicks, 1f);
+		this.m_233385_(entity.retransformAnimationState, ZombieWalkerAnimations.RETRANSFORM, ageInTicks, 1f);
+		this.m_233385_(entity.attackAnimationState, ZombieWalkerAnimations.ATTACK, ageInTicks, 1f);
 	}
 }

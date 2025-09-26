@@ -1,5 +1,6 @@
 package net.dave.davesCalamity.block;
 
+import com.mojang.serialization.MapCodec;
 import net.dave.davesCalamity.DavesCalamity;
 import net.dave.davesCalamity.block.custom.*;
 import net.dave.davesCalamity.item.ModItems;
@@ -104,10 +105,11 @@ public class ModBlocks {
                     .sound(SoundType.CROP)
                     .pushReaction(PushReaction.DESTROY)));
 
-    // 2D Cross blocks
+    // 2D blocks
 
     public static final RegistryObject<Block> BLOOMING_CACTUS = registerBlock("blooming_cactus", () -> new BloomingCactusBlock(BlockBehaviour.Properties.of()));
     public static final RegistryObject<Block> SMALL_CACTUS = registerBlock("small_cactus", () -> new SmallCactusBlock(BlockBehaviour.Properties.of()));
+    public static final RegistryObject<Block> DESERT_LILY = registerBlock("desert_lily", () -> new DesertLilyBlock(BlockBehaviour.Properties.of()));
 
 
     // Tutorial

@@ -3,15 +3,22 @@ package net.dave.davesCalamity;
 import com.mojang.logging.LogUtils;
 import net.dave.davesCalamity.armor.ModArmorMaterials;
 import net.dave.davesCalamity.block.ModBlocks;
+import net.dave.davesCalamity.block.custom.PlantBlock;
 import net.dave.davesCalamity.component.ModDataComponent;
 import net.dave.davesCalamity.effect.ModEffects;
 import net.dave.davesCalamity.entity.ModEntities;
 import net.dave.davesCalamity.entity.client.Mandrake.MandrakeRenderer;
+import net.dave.davesCalamity.entity.client.SandScorpoin.SandScorpionRenderer;
 import net.dave.davesCalamity.entity.client.Walker.ZombieWalkerRenderer;
 import net.dave.davesCalamity.item.ModCreativeModeTabs;
 import net.dave.davesCalamity.item.ModItems;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.world.entity.SpawnPlacementTypes;
+import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.level.block.ComposterBlock;
+import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -24,7 +31,10 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.ForgeRegistries;
 import org.slf4j.Logger;
+import net.minecraft.world.entity.SpawnPlacements;
+
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(DavesCalamity.MOD_ID)
@@ -100,7 +110,17 @@ public class DavesCalamity
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             EntityRenderers.register(ModEntities.MANDRAKE.get(), MandrakeRenderer::new);
+            EntityRenderers.register(ModEntities.SAND_SCORPION.get(), SandScorpionRenderer::new);
             EntityRenderers.register(ModEntities.ZOMBIE_WALKER.get(), ZombieWalkerRenderer::new);
+
+            event.enqueueWork(() -> {
+                // Loop over every registered block in your mod
+                ForgeRegistries.BLOCKS.getValues().forEach(block -> {
+                    if (block instanceof PlantBlock) {
+                        ItemBlockRenderTypes.setRenderLayer(block, RenderType.cutout());
+                    }
+                });
+            });
         }
     }
 }

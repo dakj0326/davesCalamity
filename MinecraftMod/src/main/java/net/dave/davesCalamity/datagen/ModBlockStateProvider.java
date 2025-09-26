@@ -4,6 +4,8 @@ import net.dave.davesCalamity.DavesCalamity;
 import net.dave.davesCalamity.block.ModBlocks;
 import net.dave.davesCalamity.block.custom.HopsCrop;
 import net.dave.davesCalamity.block.custom.MandrakeCrop;
+import net.dave.davesCalamity.block.custom.PlantBlock;
+import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
@@ -51,11 +53,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.TUNGSTEN_ORE);
 
 
-
         crossBlock(ModBlocks.BLOOMING_CACTUS);
         crossBlock(ModBlocks.SMALL_CACTUS);
 
         // Testing
+
+
 
         stairsBlock(ModBlocks.TEST_STAIR.get(), blockTexture(ModBlocks.TUNGSTEN_BLOCK.get()));
         slabBlock(ModBlocks.TEST_SLAB.get(), blockTexture(ModBlocks.ALUMINIUM_BLOCK.get()), blockTexture(ModBlocks.ALUMINIUM_BLOCK.get()));
@@ -121,4 +124,5 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("davescalamity:block/" +
                 ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath() + appendix));
     }
+
 }

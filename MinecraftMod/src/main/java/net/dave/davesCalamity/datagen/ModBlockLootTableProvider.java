@@ -45,6 +45,11 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.STRONG_BRONZE_BLOCK.get());
         dropSelf(ModBlocks.TIN_BLOCK.get());
         dropSelf(ModBlocks.TUNGSTEN_BLOCK.get());
+        dropSelf(ModBlocks.DESERT_LILY.get());
+
+        // Empty loot tables
+        this.add(ModBlocks.SMALL_CACTUS.get(), block -> LootTable.lootTable());
+        this.add(ModBlocks.BLOOMING_CACTUS.get(), block -> LootTable.lootTable());
 
 
         dropSelf(ModBlocks.TEST_STAIR.get());

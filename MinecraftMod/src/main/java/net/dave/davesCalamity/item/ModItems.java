@@ -139,6 +139,8 @@ public class ModItems {
     public static final RegistryObject<Item> HOPS = ITEMS.register("hops", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> MANDRAKE = ITEMS.register("mandrake", () -> new Item(new Item.Properties()));
 
+    //public static final RegistryObject<Item> DESERT_LILy = ITEMS.register("desert_lily", () -> new BlockItem(ModBlocks.DESERT_LILY.get(), new Item.Properties()));
+
     // Fuel
     public static final RegistryObject<Item> COKE = ITEMS.register("coke", () -> new CokeItem(new Item.Properties(), 1200));
 
@@ -152,6 +154,9 @@ public class ModItems {
     // Spawn Eggs
     public static final RegistryObject<Item> MANDRAKE_SPAWN_EGG = ITEMS.register("mandrake_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntities.MANDRAKE, 0x252525, 0x505050, new Item.Properties()));
+
+    public static final RegistryObject<Item> SAND_SCORPION_SPAWN_EGG = ITEMS.register("sand_scorpion_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.SAND_SCORPION, 0x550125, 0x010150, new Item.Properties()));
 
 
 

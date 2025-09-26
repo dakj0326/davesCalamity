@@ -1,0 +1,12 @@
+{
+  "type": "forge:remove_spawns",
+  "biomes": "#minecraft:is_desert",
+  "spawners": [
+    {
+      "type": "minecraft:spider",
+      "weight": 100,
+      "minCount": 4,
+      "maxCount": 4
+    }
+  ]
+}

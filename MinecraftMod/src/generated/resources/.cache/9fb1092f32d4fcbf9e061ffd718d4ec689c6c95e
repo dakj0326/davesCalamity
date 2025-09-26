@@ -1,4 +1,4 @@
-// 1.21	2025-08-22T18:39:06.248699	Recipes
+// 1.21	2025-09-25T20:52:09.9184095	Recipes
 66d895b38eb2ce32e1134c6e875161ccc19db86b data/davescalamity/advancement/recipes/building_blocks/aluminium_block.json
 e335bbe075287ca4c3c40a85e5d529fc8f1292be data/davescalamity/advancement/recipes/building_blocks/bronze_block.json
 975d2b2091fa1465c4e889c3c83d551ed86e2596 data/davescalamity/advancement/recipes/building_blocks/raw_aluminium_block.json
@@ -49,6 +49,7 @@ f1defe6447efeab8261fec8d6ff7b679127a0f4b data/davescalamity/advancement/recipes/
 2ee71a596417aa1b94b33674ad9f5a707f746cae data/davescalamity/advancement/recipes/misc/blasting_tungsten_ingot.json
 dd555ed8af8770b281a9ad1ae4da45dc754df42f data/davescalamity/advancement/recipes/misc/bronze_ingot.json
 0e568e4fe80ecd0b879c6f96dc82db2366a50ba3 data/davescalamity/advancement/recipes/misc/bronze_ingot_from_block.json
+e9d60bb005d92eafb1e5b50fa249aab52aa3d009 data/davescalamity/advancement/recipes/misc/magenta_dye_from_desert_lily.json
 bdfeea3bc49dd926fd9eccd26ae8f31fb90e85f7 data/davescalamity/advancement/recipes/misc/raw_aluminium.json
 0b99c4e65e28e3c4d952784a3357e9ed5679a89d data/davescalamity/advancement/recipes/misc/raw_silver.json
 18dae27e4899a4ff97e5372cdc6038dda859d2d6 data/davescalamity/advancement/recipes/misc/raw_tin.json
@@ -103,6 +104,7 @@ b5ab0c32a0d1fa52d9bf7e12646a91b0d10da8cf data/davescalamity/recipe/bronze_hoe.js
 4ea9f8e90335136e0758fd9a9717564b560d5bbf data/davescalamity/recipe/bronze_pickaxe.json
 5c8b12f4b4390140f2558da36acf15bf5acb7ff7 data/davescalamity/recipe/bronze_shovel.json
 5ac16bbfa98e4f2737dc8d2d14727120b1d1ba02 data/davescalamity/recipe/bronze_sword.json
+62b40fbe5045494a8731aea82e901c7d10a8cb6e data/davescalamity/recipe/magenta_dye_from_desert_lily.json
 da5bc14e3642088f42493fac874daf6fd207c2e6 data/davescalamity/recipe/raw_aluminium.json
 7eee1d31c3a2b6f92011c16d89cae5b33e3b7565 data/davescalamity/recipe/raw_aluminium_block.json
 f582d2beab589c2f5e28b4174c3ab94b5bcb5762 data/davescalamity/recipe/raw_silver.json

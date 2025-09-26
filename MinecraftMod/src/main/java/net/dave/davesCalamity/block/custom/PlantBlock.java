@@ -23,8 +23,8 @@ public abstract class PlantBlock extends Block {
                 .noCollission()
                 .instabreak()
                 .sound(SoundType.GRASS)
-                .noOcclusion()
-                .noLootTable());  // always decorative
+                .noOcclusion());
+        // always decorative
         this.validSoil = validSoil;
     }
 

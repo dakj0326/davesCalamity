@@ -2,10 +2,12 @@ package net.dave.davesCalamity.util;
 
 import net.dave.davesCalamity.DavesCalamity;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BiomeTags;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 
 public class ModTags {
@@ -37,6 +39,14 @@ public class ModTags {
 
         private static TagKey<Item> createTag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(DavesCalamity.MOD_ID, name));
+        }
+    }
+
+    public static class Biomes {
+        public static final TagKey<Biome> IS_DESERT = createTag("is_desert");
+
+        private static TagKey<Biome> createTag(String name) {
+            return BiomeTags.create(ResourceLocation.fromNamespaceAndPath(DavesCalamity.MOD_ID, name));
         }
     }
 }

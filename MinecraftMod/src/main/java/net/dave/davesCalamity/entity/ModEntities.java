@@ -2,6 +2,7 @@ package net.dave.davesCalamity.entity;
 
 import net.dave.davesCalamity.DavesCalamity;
 import net.dave.davesCalamity.entity.custom.MandrakeEntity;
+import net.dave.davesCalamity.entity.custom.SandScorpionEntity;
 import net.dave.davesCalamity.entity.custom.ZombieWalkerEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -21,6 +22,9 @@ public class ModEntities {
     public static final RegistryObject<EntityType<ZombieWalkerEntity>> ZOMBIE_WALKER =
             ENTITY_TYPES.register("zombie_walker", () -> EntityType.Builder.of(ZombieWalkerEntity::new, MobCategory.CREATURE)
                     .sized(0.6f, 1.95f).build("zombie_walker")); // Bounding box
+    public static final RegistryObject<EntityType<SandScorpionEntity>> SAND_SCORPION =
+            ENTITY_TYPES.register("sand_scorpion", () -> EntityType.Builder.of(SandScorpionEntity::new, MobCategory.MONSTER)
+                    .sized(0.8f, 0.28f).build("sand_scorpion")); // Bounding box
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

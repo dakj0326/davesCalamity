@@ -11,7 +11,7 @@ import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 
-public class ZombieWalkerEntity extends Monster {
+public class ZombieWalkerEntity extends BasicMonster {
     public final AnimationState idleAnimationState = new  AnimationState();
     public final AnimationState attackAnimationState = new AnimationState();
     public final AnimationState runAnimationState = new AnimationState();
@@ -22,19 +22,6 @@ public class ZombieWalkerEntity extends Monster {
 
     public ZombieWalkerEntity(EntityType<? extends Monster> p_33002_, Level p_33003_) {
         super(p_33002_, p_33003_);
-    }
-
-
-    @Override
-    protected void registerGoals() {
-        this.goalSelector.addGoal(0, new FloatGoal(this));
-        this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2D, false)); // runs & attacks
-        this.goalSelector.addGoal(7, new WaterAvoidingRandomStrollGoal(this, 1.0));
-        this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
-        this.goalSelector.addGoal(9, new LookAtPlayerGoal(this, Player.class, 6.0F));
-
-        this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, true));
-        this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
     }
 
     public static AttributeSupplier.Builder createAttributes() {
@@ -49,34 +36,38 @@ public class ZombieWalkerEntity extends Monster {
     }
 
     private void setupAnimationStates() {
+        // Idle cycle
         if (this.idleAnimationTimeout <= 0) {
-            this.idleAnimationTimeout = 85;
+            this.idleAnimationTimeout = 58; // ticks
             this.idleAnimationState.start(this.tickCount);
         } else {
             --this.idleAnimationTimeout;
+        }
+
+        if (this.isAggressive()) {
+            if (!transformed) {
+                this.transformAnimationState.startIfStopped(this.tickCount);
+                transformed = true;
+            } else if (!this.transformAnimationState.isStarted()) {
+                this.runAnimationState.startIfStopped(this.tickCount);
+            }
+        } else {
+            if (transformed) {
+                if (!this.retransformAnimationState.isStarted()) {
+                    this.retransformAnimationState.start(this.tickCount);
+                }
+                if (!this.retransformAnimationState.isStarted()) {
+                    transformed = false;
+                }
+            }
         }
     }
 
     @Override
     public void tick() {
         super.tick();
-
-        if (this.level().isClientSide) {
+        if (this.level().isClientSide()) {
             this.setupAnimationStates();
-
-            if (this.getTarget() != null && this.getTarget().isAlive()) {
-                if (!transformed) {
-                    this.transformAnimationState.start(this.tickCount); // force start
-                    transformed = true;
-                } else if (!this.transformAnimationState.isStarted()) {
-                    this.runAnimationState.startIfStopped(this.tickCount);
-                }
-            } else {
-                if (transformed) {
-                    this.retransformAnimationState.start(this.tickCount); // force start
-                    transformed = false;
-                }
-            }
         }
     }
 }

@@ -142,6 +142,8 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.BLOOMING_CACTUS.get());
                         output.accept(ModBlocks.SMALL_CACTUS.get());
+                        output.accept(ModBlocks.DESERT_LILY.get());
+
 
                     }).build());
 
@@ -172,6 +174,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.davescalamity.mod_foods"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.MANDRAKE_SPAWN_EGG.get());
+                        output.accept(ModItems.SAND_SCORPION_SPAWN_EGG.get());
                     }).build());
 
     public static void register(IEventBus eventBus) {

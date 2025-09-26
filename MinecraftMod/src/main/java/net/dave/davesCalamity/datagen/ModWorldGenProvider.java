@@ -1,22 +1,33 @@
 package net.dave.davesCalamity.datagen;
 
 import net.dave.davesCalamity.block.ModBlocks;
+import net.dave.davesCalamity.entity.ModEntities;
+import net.dave.davesCalamity.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.worldgen.BootstrapContext;
+import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BiomeTags;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobCategory;
+import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.RandomPatchConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
+import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.placement.*;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
@@ -34,13 +45,59 @@ import static net.dave.davesCalamity.DavesCalamity.MOD_ID;
 public class ModWorldGenProvider extends DatapackBuiltinEntriesProvider {
     public ModWorldGenProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries, new RegistrySetBuilder()
-                        .add(Registries.CONFIGURED_FEATURE, ModWorldGenProvider::bootstrapConfigured)
-                        .add(Registries.PLACED_FEATURE, ModWorldGenProvider::bootstrapPlaced)
-                        .add(ForgeRegistries.Keys.BIOME_MODIFIERS, ModWorldGenProvider::bootstrapBiomeModifiers), // ← add this
-
+                        .add(Registries.CONFIGURED_FEATURE, ctx -> {
+                            bootstrapConfigured(ctx);
+                            bootstrapPlants(ctx, null, null);
+                        })
+                        .add(Registries.PLACED_FEATURE, ctx -> {
+                            bootstrapPlaced(ctx);
+                            bootstrapPlants(null, ctx, null);
+                        })
+                        .add(ForgeRegistries.Keys.BIOME_MODIFIERS, ctx -> {
+                            bootstrapBiomeModifiers(ctx);
+                            bootstrapPlants(null, null, ctx);
+                        }),
                 Set.of("minecraft", MOD_ID));
     }
 
+    private static void bootstrapPlants(
+            BootstrapContext<ConfiguredFeature<?, ?>> ctxConfigured,
+            BootstrapContext<PlacedFeature> ctxPlaced,
+            BootstrapContext<BiomeModifier> ctxBiome
+    ) {
+        registerSimplePlant(
+                ctxConfigured,
+                ctxPlaced,
+                ctxBiome,
+                "desert_lily",
+                ModBlocks.DESERT_LILY.get(),
+                1,  // patches per chunk
+                6,  // tries per patch
+                ModTags.Biomes.IS_DESERT
+        );
+
+        registerSimplePlant(
+                ctxConfigured,
+                ctxPlaced,
+                ctxBiome,
+                "small_cactus",
+                ModBlocks.SMALL_CACTUS.get(),
+                2,
+                7,
+                ModTags.Biomes.IS_DESERT
+        );
+
+        registerSimplePlant(
+                ctxConfigured,
+                ctxPlaced,
+                ctxBiome,
+                "blooming_cactus",
+                ModBlocks.BLOOMING_CACTUS.get(),
+                1,
+                4,
+                ModTags.Biomes.IS_DESERT
+        );
+    }
 
 
     private static void bootstrapConfigured(BootstrapContext<ConfiguredFeature<?, ?>> ctx) {
@@ -71,12 +128,13 @@ public class ModWorldGenProvider extends DatapackBuiltinEntriesProvider {
         BiomeModifierForOre(ctx, "deepslate_aluminium_ore_vein", "add_deepslate_aluminium_ore");
         BiomeModifierForOre(ctx, "deepslate_tungsten_ore_vein", "add_deepslate_tungsten_ore");
         BiomeModifierForOre(ctx, "deepslate_purple_garnet_ore_vein", "add_deepslate_purple_garnet_ore");
+        registerMobSpawn(ctx, "sand_scorpion", ModEntities.SAND_SCORPION.get(), 200, 1, 5, ModTags.Biomes.IS_DESERT);
 
     }
 
     private static void BiomeModifierForOre(BootstrapContext<BiomeModifier> ctx, String placedName, String addName) {
-        var biomesLookup  = ctx.lookup(Registries.BIOME);
-        var placedLookup  = ctx.lookup(Registries.PLACED_FEATURE);
+        var biomesLookup = ctx.lookup(Registries.BIOME);
+        var placedLookup = ctx.lookup(Registries.PLACED_FEATURE);
 
         var overworldBiomes = biomesLookup.getOrThrow(BiomeTags.IS_OVERWORLD);
         var orePlaced = placedLookup.getOrThrow(placedKey(placedName));
@@ -167,6 +225,97 @@ public class ModWorldGenProvider extends DatapackBuiltinEntriesProvider {
                                 ),
                                 BiomeFilter.biome()                            // only valid biomes
                         )
+                )
+        );
+    }
+
+    private static void registerSimplePlant(
+            BootstrapContext<ConfiguredFeature<?, ?>> configuredCtx,
+            BootstrapContext<PlacedFeature> placedCtx,
+            BootstrapContext<BiomeModifier> biomeCtx,
+            String name,
+            Block block,
+            int patchesPerChunk,
+            int triesPerPatch,
+            TagKey<Biome> biomeTag
+
+    ) {
+        // 1. ConfiguredFeature
+        if (configuredCtx != null) {
+            var configuredKey = ResourceKey.create(Registries.CONFIGURED_FEATURE, rl(name));
+            configuredCtx.register(configuredKey,
+                    new ConfiguredFeature<>(
+                            Feature.FLOWER,
+                            new RandomPatchConfiguration(
+                                    triesPerPatch,
+                                    6,
+                                    2,
+                                    PlacementUtils.onlyWhenEmpty(
+                                            Feature.SIMPLE_BLOCK,
+                                            new SimpleBlockConfiguration(BlockStateProvider.simple(block))
+                                    )
+                            )
+                    )
+            );
+        }
+
+        // 2. PlacedFeature
+        if (placedCtx != null) {
+            var configuredKey = ResourceKey.create(Registries.CONFIGURED_FEATURE, rl(name));
+            var placedKey = ResourceKey.create(Registries.PLACED_FEATURE, rl(name));
+            placedCtx.register(placedKey,
+                    new PlacedFeature(
+                            placedCtx.lookup(Registries.CONFIGURED_FEATURE).getOrThrow(configuredKey),
+                            List.of(
+                                    CountPlacement.of(patchesPerChunk),
+                                    InSquarePlacement.spread(),
+                                    PlacementUtils.HEIGHTMAP_WORLD_SURFACE,
+                                    BiomeFilter.biome()
+                            )
+                    )
+            );
+        }
+
+        // 3. BiomeModifier
+        if (biomeCtx != null) {
+            var placedKey = ResourceKey.create(Registries.PLACED_FEATURE, rl(name));
+            var biomesLookup = biomeCtx.lookup(Registries.BIOME);
+            var placedLookup = biomeCtx.lookup(Registries.PLACED_FEATURE);
+
+            var targetBiomes = biomesLookup.getOrThrow(biomeTag);
+            var placedFeature = placedLookup.getOrThrow(placedKey);
+
+            biomeCtx.register(
+                    biomeModKey("add_" + name),
+                    new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                            targetBiomes,
+                            HolderSet.direct(placedFeature),
+                            GenerationStep.Decoration.VEGETAL_DECORATION
+                    )
+            );
+        }
+    }
+
+    private static void registerMobSpawn(
+            BootstrapContext<BiomeModifier> ctx,
+            String name,
+            EntityType<?> entity,
+            int weight,
+            int minCount,
+            int maxCount,
+            TagKey<Biome> biomeTag
+    ) {
+        var biomesLookup = ctx.lookup(Registries.BIOME);
+
+        // Build the spawner data with category baked in
+        MobSpawnSettings.SpawnerData spawner =
+                new MobSpawnSettings.SpawnerData(entity, weight, minCount, maxCount);
+
+        ctx.register(
+                biomeModKey("spawn_" + name),
+                ForgeBiomeModifiers.AddSpawnsBiomeModifier.singleSpawn(
+                        biomesLookup.getOrThrow(biomeTag),
+                        spawner
                 )
         );
     }

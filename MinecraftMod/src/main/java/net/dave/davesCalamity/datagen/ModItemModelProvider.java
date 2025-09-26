@@ -90,6 +90,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         // Spawn Eggs
         withExistingParent(ModItems.MANDRAKE_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.SAND_SCORPION_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent("desert_lily", modLoc("block/desert_lily"));
 
 
 
