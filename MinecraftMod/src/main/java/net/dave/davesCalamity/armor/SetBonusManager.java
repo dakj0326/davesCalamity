@@ -17,10 +17,10 @@ public class SetBonusManager {
     public void onArmorChanged(ServerPlayer player) {
         String currentKey = detectFullSetKey(player); // e.g., "bronze_melee", "ranger_leather", or null
 
-        System.out.println("Current key: " + currentKey);
+        //System.out.println("Current key: " + currentKey);
 
         if (!Objects.equals(currentKey, activeKey)) {
-            System.out.println("found that there is a new active key" + activeKey);// State changed → remove old, apply new
+            //System.out.println("found that there is a new active key" + activeKey);// State changed → remove old, apply new
             removeCurrentBonus(player);
             if (currentKey != null) applyBonusForKey(player, currentKey);
             activeKey = currentKey;

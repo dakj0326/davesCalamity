@@ -1,10 +1,7 @@
 package net.dave.davesCalamity.entity.client.SandScorpoin;
 
-
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import net.dave.davesCalamity.entity.client.Mandrake.MandrakeAnimations;
-import net.dave.davesCalamity.entity.custom.MandrakeEntity;
 import net.dave.davesCalamity.entity.custom.SandScorpionEntity;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
@@ -13,12 +10,9 @@ import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
-import net.minecraft.world.entity.Entity;
-
 import static net.dave.davesCalamity.DavesCalamity.MOD_ID;
 
 public class SandScorpionModel<T extends SandScorpionEntity> extends HierarchicalModel<T> {
-	// This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(MOD_ID, "sand_scorpion"), "main");
 	private final ModelPart root;
 	private final ModelPart head;

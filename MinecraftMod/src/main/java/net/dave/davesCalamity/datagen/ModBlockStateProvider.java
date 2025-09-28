@@ -2,10 +2,10 @@ package net.dave.davesCalamity.datagen;
 
 import net.dave.davesCalamity.DavesCalamity;
 import net.dave.davesCalamity.block.ModBlocks;
+import net.dave.davesCalamity.block.custom.CabbageCrop;
 import net.dave.davesCalamity.block.custom.HopsCrop;
 import net.dave.davesCalamity.block.custom.MandrakeCrop;
-import net.dave.davesCalamity.block.custom.PlantBlock;
-import net.minecraft.core.Direction;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
@@ -18,7 +18,6 @@ import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-
 import java.util.function.Function;
 
 public class ModBlockStateProvider extends BlockStateProvider {
@@ -52,9 +51,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.TUNGSTEN_BLOCK);
         blockWithItem(ModBlocks.TUNGSTEN_ORE);
 
-
+        // Cross Blocks
         crossBlock(ModBlocks.BLOOMING_CACTUS);
         crossBlock(ModBlocks.SMALL_CACTUS);
+
+        // Crops
+        makeCrop(((CropBlock) ModBlocks.HOPS_CROP.get()), HopsCrop.AGE,"hops_crop_stage", "hops_crop_stage");
+        makeCrop(((CropBlock) ModBlocks.MANDRAKE_CROP.get()), MandrakeCrop.AGE, "mandrake_crop_stage", "mandrake_crop_stage");
+        makeCrop(((CropBlock) ModBlocks.CABBAGE_CROP.get()), CabbageCrop.AGE, "cabbage_crop_stage", "cabbage_crop_stage");
+
 
         // Testing
 
@@ -77,9 +82,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.TEST_FENCE_GATE);
         blockItem(ModBlocks.TEST_TRAPDOOR, "_bottom");
 
-        // Crops
-        makeCrop(((CropBlock) ModBlocks.HOPS_CROP.get()), HopsCrop.AGE,"hops_crop_stage", "hops_crop_stage");
-        makeCrop(((CropBlock) ModBlocks.MANDRAKE_CROP.get()), MandrakeCrop.AGE, "mandrake_crop_stage", "mandrake_crop_stage");
+
     }
 
     public void makeCrop(CropBlock block, IntegerProperty ageProperty, String modelName, String textureName) {
@@ -124,5 +127,4 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("davescalamity:block/" +
                 ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath() + appendix));
     }
-
 }

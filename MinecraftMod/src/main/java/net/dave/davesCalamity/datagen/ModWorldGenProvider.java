@@ -16,7 +16,6 @@ import net.minecraft.tags.BiomeTags;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.block.Block;
@@ -31,6 +30,7 @@ import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvi
 import net.minecraft.world.level.levelgen.placement.*;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.DatapackBuiltinEntriesProvider;
 import net.minecraftforge.common.world.BiomeModifier;
 import net.minecraftforge.common.world.ForgeBiomeModifiers;
@@ -43,6 +43,8 @@ import java.util.concurrent.CompletableFuture;
 import static net.dave.davesCalamity.DavesCalamity.MOD_ID;
 
 public class ModWorldGenProvider extends DatapackBuiltinEntriesProvider {
+    public static final TagKey<Biome> OVERWORLD_BIOMES =
+            TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("minecraft", "is_overworld"));
     public ModWorldGenProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries, new RegistrySetBuilder()
                         .add(Registries.CONFIGURED_FEATURE, ctx -> {
@@ -128,8 +130,10 @@ public class ModWorldGenProvider extends DatapackBuiltinEntriesProvider {
         BiomeModifierForOre(ctx, "deepslate_aluminium_ore_vein", "add_deepslate_aluminium_ore");
         BiomeModifierForOre(ctx, "deepslate_tungsten_ore_vein", "add_deepslate_tungsten_ore");
         BiomeModifierForOre(ctx, "deepslate_purple_garnet_ore_vein", "add_deepslate_purple_garnet_ore");
+        registerMobSpawn(ctx, "dune_wraith", ModEntities.DUNE_WRAITH.get(), 10, 1, 1, ModTags.Biomes.IS_DESERT);
         registerMobSpawn(ctx, "sand_scorpion", ModEntities.SAND_SCORPION.get(), 200, 1, 5, ModTags.Biomes.IS_DESERT);
-
+        registerMobSpawn(ctx, "stone_golem", ModEntities.STONE_GOLEM.get(), 65, 1, 2, OVERWORLD_BIOMES);
+        registerMobSpawn(ctx, "mandrake", ModEntities.MANDRAKE.get(), 30, 1, 3, Tags.Biomes.IS_SWAMP);
     }
 
     private static void BiomeModifierForOre(BootstrapContext<BiomeModifier> ctx, String placedName, String addName) {

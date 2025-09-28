@@ -34,6 +34,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.RAW_TUNGSTEN.get());
                         output.accept(ModItems.PURPLE_GARNET.get());
 
+                        // Misc
+                        output.accept(ModItems.CHITIN.get());
+                        output.accept(ModItems.CHITIN_POWDER.get());
+                        output.accept(ModItems.REINFORCED_LEATHER.get());
+
                     }).build());
 
     public static final RegistryObject<CreativeModeTab> MOD_BLOCKS_TAB = CREATIVE_MODE_TABS.register(
@@ -76,7 +81,8 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.MANGO.get());
                         output.accept(ModItems.CABBAGE.get());
-                        output.accept(ModItems.HOPS_SEED.get());
+                        output.accept(ModItems.CABBAGE_SEEDS.get());
+                        output.accept(ModItems.HOPS_SEEDS.get());
                         output.accept(ModItems.HOPS.get());
                         output.accept(ModItems.MANDRAKE_ROOT.get());
                         output.accept(ModItems.MANDRAKE.get());
@@ -89,10 +95,10 @@ public class ModCreativeModeTabs {
                     .withTabsBefore(MOD_FOODS_TAB.getId())
                     .title(Component.translatable("creativetab.davescalamity.mod_tools"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModItems.CHISEL.get());
                         output.accept(ModItems.BRONZE_PICKAXE.get());
                         output.accept(ModItems.STRONG_BRONZE_PICKAXE.get());
                         output.accept(ModItems.STEEL_PICKAXE.get());
+                        output.accept(ModItems.BRONZE_AXE.get());
                         output.accept(ModItems.BRONZE_AXE.get());
                         output.accept(ModItems.STRONG_BRONZE_AXE.get());
                         output.accept(ModItems.STEEL_AXE.get());
@@ -102,6 +108,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.BRONZE_SHOVEL.get());
                         output.accept(ModItems.STRONG_BRONZE_SHOVEL.get());
                         output.accept(ModItems.STEEL_SHOVEL.get());
+                        output.accept(ModItems.BRONZE_SWORD.get());
+                        output.accept(ModItems.STRONG_BRONZE_SWORD.get());
+                        output.accept(ModItems.STEEL_SWORD.get());
                         output.accept(ModItems.TIN_HELMET.get());
                         output.accept(ModItems.TIN_CHESTPLATE.get());
                         output.accept(ModItems.TIN_LEGGINGS.get());
@@ -130,7 +139,14 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.SILVER_CHESTPLATE.get());
                         output.accept(ModItems.SILVER_LEGGINGS.get());
                         output.accept(ModItems.SILVER_BOOTS.get());
-
+                        output.accept(ModItems.CHITIN_HELMET.get());
+                        output.accept(ModItems.CHITIN_CHESTPLATE.get());
+                        output.accept(ModItems.CHITIN_LEGGINGS.get());
+                        output.accept(ModItems.CHITIN_BOOTS.get());
+                        output.accept(ModItems.REINFORCED_LEATHER_HELMET.get());
+                        output.accept(ModItems.REINFORCED_LEATHER_CHESTPLATE.get());
+                        output.accept(ModItems.REINFORCED_LEATHER_LEGGINGS.get());
+                        output.accept(ModItems.REINFORCED_LEATHER_BOOTS.get());
 
                     }).build());
 
@@ -162,6 +178,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.TEST_FENCE_GATE.get());
                         output.accept(ModBlocks.TEST_DOOR.get());
                         output.accept(ModBlocks.TEST_TRAPDOOR.get());
+                        output.accept(ModItems.CHISEL.get());
 
                     }).build());
 
@@ -173,8 +190,10 @@ public class ModCreativeModeTabs {
                     .withTabsBefore(MOD_TEST_TAB.getId())
                     .title(Component.translatable("creativetab.davescalamity.mod_foods"))
                     .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModItems.DUNE_WRAITH_SPAWN_EGG.get());
                         output.accept(ModItems.MANDRAKE_SPAWN_EGG.get());
                         output.accept(ModItems.SAND_SCORPION_SPAWN_EGG.get());
+                        output.accept(ModItems.STONE_GOLEM_SPAWN_EGG.get());
                     }).build());
 
     public static void register(IEventBus eventBus) {

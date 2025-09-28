@@ -105,11 +105,21 @@ public class ModBlocks {
                     .sound(SoundType.CROP)
                     .pushReaction(PushReaction.DESTROY)));
 
+    public static final RegistryObject<Block> CABBAGE_CROP = BLOCKS.register("cabbage_crop",
+            () -> new CabbageCrop(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.PLANT)
+                    .noCollission()
+                    .randomTicks()
+                    .instabreak()
+                    .sound(SoundType.CROP)
+                    .pushReaction(PushReaction.DESTROY)));
+
     // 2D blocks
 
     public static final RegistryObject<Block> BLOOMING_CACTUS = registerBlock("blooming_cactus", () -> new BloomingCactusBlock(BlockBehaviour.Properties.of()));
     public static final RegistryObject<Block> SMALL_CACTUS = registerBlock("small_cactus", () -> new SmallCactusBlock(BlockBehaviour.Properties.of()));
     public static final RegistryObject<Block> DESERT_LILY = registerBlock("desert_lily", () -> new DesertLilyBlock(BlockBehaviour.Properties.of()));
+
 
 
     // Tutorial

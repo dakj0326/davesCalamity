@@ -1,9 +1,7 @@
 package net.dave.davesCalamity.entity;
 
 import net.dave.davesCalamity.DavesCalamity;
-import net.dave.davesCalamity.entity.custom.MandrakeEntity;
-import net.dave.davesCalamity.entity.custom.SandScorpionEntity;
-import net.dave.davesCalamity.entity.custom.ZombieWalkerEntity;
+import net.dave.davesCalamity.entity.custom.*;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -25,6 +23,18 @@ public class ModEntities {
     public static final RegistryObject<EntityType<SandScorpionEntity>> SAND_SCORPION =
             ENTITY_TYPES.register("sand_scorpion", () -> EntityType.Builder.of(SandScorpionEntity::new, MobCategory.MONSTER)
                     .sized(0.8f, 0.28f).build("sand_scorpion")); // Bounding box
+    public static final RegistryObject<EntityType<StoneGolemEntity>> STONE_GOLEM =
+            ENTITY_TYPES.register("stone_golem", () -> EntityType.Builder.of(StoneGolemEntity::new, MobCategory.MONSTER)
+                    .sized(1.5f, 2.4f).build("stone_golem")); // Bounding box
+    public static final RegistryObject<EntityType<DuneWraithEntity>> DUNE_WRAITH =
+            ENTITY_TYPES.register("dune_wraith", () -> EntityType.Builder.of(DuneWraithEntity::new, MobCategory.MONSTER)
+                    .sized(0.8f, 2.4f).build("dune_wraith")); // Bounding box
+    public static final RegistryObject<EntityType<SandClusterEntity>> SAND_CLUSTER =
+            ENTITY_TYPES.register("sand_cluster", () -> EntityType.Builder.<SandClusterEntity>of(SandClusterEntity::new, MobCategory.MISC)
+                            .sized(0.25F, 0.25F) // hitbox size
+                            .clientTrackingRange(4) // how far clients can see it
+                            .updateInterval(10) // how often to sync position
+                            .build("sand_cluster"));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

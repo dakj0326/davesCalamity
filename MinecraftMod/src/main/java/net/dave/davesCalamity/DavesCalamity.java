@@ -7,18 +7,21 @@ import net.dave.davesCalamity.block.custom.PlantBlock;
 import net.dave.davesCalamity.component.ModDataComponent;
 import net.dave.davesCalamity.effect.ModEffects;
 import net.dave.davesCalamity.entity.ModEntities;
+import net.dave.davesCalamity.entity.client.DuneWraith.DuneWraithRenderer;
 import net.dave.davesCalamity.entity.client.Mandrake.MandrakeRenderer;
+import net.dave.davesCalamity.entity.client.SandCluster.SandClusterRenderer;
 import net.dave.davesCalamity.entity.client.SandScorpoin.SandScorpionRenderer;
+import net.dave.davesCalamity.entity.client.StoneGolem.StoneGolemRenderer;
 import net.dave.davesCalamity.entity.client.Walker.ZombieWalkerRenderer;
 import net.dave.davesCalamity.item.ModCreativeModeTabs;
 import net.dave.davesCalamity.item.ModItems;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.blockentity.SkullBlockRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
-import net.minecraft.world.entity.SpawnPlacementTypes;
-import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.ComposterBlock;
-import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraft.world.level.block.SkullBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -33,7 +36,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.slf4j.Logger;
-import net.minecraft.world.entity.SpawnPlacements;
 
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -83,7 +85,7 @@ public class DavesCalamity
         // Make crops compostable
         event.enqueueWork(() -> {
             ComposterBlock.COMPOSTABLES.put(ModItems.HOPS.get(), 0.5f);
-            ComposterBlock.COMPOSTABLES.put(ModItems.HOPS_SEED.get(), 0.15f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.HOPS_SEEDS.get(), 0.15f);
             ComposterBlock.COMPOSTABLES.put(ModItems.MANDRAKE.get(), 0.5f);
             ComposterBlock.COMPOSTABLES.put(ModItems.MANDRAKE_ROOT.get(), 0.15f);
         });
@@ -111,7 +113,15 @@ public class DavesCalamity
         {
             EntityRenderers.register(ModEntities.MANDRAKE.get(), MandrakeRenderer::new);
             EntityRenderers.register(ModEntities.SAND_SCORPION.get(), SandScorpionRenderer::new);
+            EntityRenderers.register(ModEntities.STONE_GOLEM.get(), StoneGolemRenderer::new);
             EntityRenderers.register(ModEntities.ZOMBIE_WALKER.get(), ZombieWalkerRenderer::new);
+            EntityRenderers.register(ModEntities.DUNE_WRAITH.get(), DuneWraithRenderer::new);
+            EntityRenderers.register(ModEntities.SAND_CLUSTER.get(), SandClusterRenderer::new);
+
+            SkullBlockRenderer.SKIN_BY_TYPE.put(
+                    SkullBlock.Types.SKELETON,
+                    ResourceLocation.fromNamespaceAndPath(MOD_ID, "textures/entity/dune_wraith_skull.png")
+            );
 
             event.enqueueWork(() -> {
                 // Loop over every registered block in your mod

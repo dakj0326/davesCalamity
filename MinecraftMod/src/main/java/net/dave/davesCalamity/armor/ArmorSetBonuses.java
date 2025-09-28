@@ -46,8 +46,18 @@ public class ArmorSetBonuses {
                     new MobEffectInstance(ModEffects.PINNING_SHOT.getHolder().get(), 600, 0),
                     new MobEffectInstance(ModEffects.LONGSHOT.getHolder().get(), 600, 0)
             )),
+            Map.entry("chitin", List.of(
+                    new MobEffectInstance(MobEffects.LUCK, 600, 1),
+                    new MobEffectInstance(ModEffects.PINNING_SHOT.getHolder().get(), 600, 1),
+                    new MobEffectInstance(ModEffects.LONGSHOT.getHolder().get(), 600, 0)
+            )),
+            Map.entry("reinforced_leather", List.of(
+                    new MobEffectInstance(MobEffects.LUCK, 600, 1),
+                    new MobEffectInstance(ModEffects.PINNING_SHOT.getHolder().get(), 600, 2),
+                    new MobEffectInstance(ModEffects.LONGSHOT.getHolder().get(), 600, 1)
+            )),
             Map.entry("chain", List.of(
-                    new MobEffectInstance(MobEffects.LUCK, 600, 2),
+                    new MobEffectInstance(MobEffects.LUCK, 600, 1),
                     new MobEffectInstance(ModEffects.PINNING_SHOT.getHolder().get(), 600, 0),
                     new MobEffectInstance(ModEffects.LONGSHOT.getHolder().get(), 600, 1)
             )),

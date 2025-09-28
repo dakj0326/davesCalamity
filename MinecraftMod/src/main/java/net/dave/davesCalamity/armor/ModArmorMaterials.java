@@ -125,15 +125,48 @@ public class ModArmorMaterials {
     public static final RegistryObject<ArmorMaterial> SILVER = ARMOR_MATERIALS.register("silver", () ->
             new ArmorMaterial(
                     new EnumMap<>(ArmorItem.Type.class) {{
-                        put(ArmorItem.Type.HELMET, 1);
+                        put(ArmorItem.Type.HELMET, 2);
                         put(ArmorItem.Type.CHESTPLATE, 4);
-                        put(ArmorItem.Type.LEGGINGS, 2);
-                        put(ArmorItem.Type.BOOTS, 1);
+                        put(ArmorItem.Type.LEGGINGS, 3);
+                        put(ArmorItem.Type.BOOTS, 2);
                     }},
                     22, // enchantability
                     SoundEvents.ARMOR_EQUIP_IRON, // equip sound
                     () -> Ingredient.of(ModItems.SILVER_INGOT.get()), // repair ingredient
                     List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(MOD_ID, "silver"))),
+                    1.0F, // toughness
+                    0.0F  // knockback resistance
+            )
+    );
+    // Ranged
+    public static final RegistryObject<ArmorMaterial> CHITIN = ARMOR_MATERIALS.register("chitin", () ->
+            new ArmorMaterial(
+                    new EnumMap<>(ArmorItem.Type.class) {{
+                        put(ArmorItem.Type.HELMET, 2);
+                        put(ArmorItem.Type.CHESTPLATE, 4);
+                        put(ArmorItem.Type.LEGGINGS, 2);
+                        put(ArmorItem.Type.BOOTS, 1);
+                    }},
+                    15, // enchantability
+                    SoundEvents.ARMOR_EQUIP_IRON, // equip sound
+                    () -> Ingredient.of(ModItems.CHITIN.get()), // repair ingredient
+                    List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(MOD_ID, "chitin"))),
+                    1.0F, // toughness
+                    0.0F  // knockback resistance
+            )
+    );
+    public static final RegistryObject<ArmorMaterial> REINFORCED_LEATHER = ARMOR_MATERIALS.register("reinforced_leather", () ->
+            new ArmorMaterial(
+                    new EnumMap<>(ArmorItem.Type.class) {{
+                        put(ArmorItem.Type.HELMET, 3);
+                        put(ArmorItem.Type.CHESTPLATE, 5);
+                        put(ArmorItem.Type.LEGGINGS, 3);
+                        put(ArmorItem.Type.BOOTS, 1);
+                    }},
+                    18, // enchantability
+                    SoundEvents.ARMOR_EQUIP_IRON, // equip sound
+                    () -> Ingredient.of(ModItems.REINFORCED_LEATHER.get()), // repair ingredient
+                    List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(MOD_ID, "reinforced_leather"))),
                     1.0F, // toughness
                     0.0F  // knockback resistance
             )

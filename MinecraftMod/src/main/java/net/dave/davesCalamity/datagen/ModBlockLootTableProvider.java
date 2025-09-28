@@ -1,6 +1,7 @@
 package net.dave.davesCalamity.datagen;
 
 import net.dave.davesCalamity.block.ModBlocks;
+import net.dave.davesCalamity.block.custom.CabbageCrop;
 import net.dave.davesCalamity.block.custom.HopsCrop;
 import net.dave.davesCalamity.block.custom.MandrakeCrop;
 import net.dave.davesCalamity.item.ModItems;
@@ -46,10 +47,12 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.TIN_BLOCK.get());
         dropSelf(ModBlocks.TUNGSTEN_BLOCK.get());
         dropSelf(ModBlocks.DESERT_LILY.get());
+        dropSelf(ModBlocks.BLOOMING_CACTUS.get());
+        dropSelf(ModBlocks.SMALL_CACTUS.get());
+
 
         // Empty loot tables
-        this.add(ModBlocks.SMALL_CACTUS.get(), block -> LootTable.lootTable());
-        this.add(ModBlocks.BLOOMING_CACTUS.get(), block -> LootTable.lootTable());
+        // Example:  this.add(ModBlocks.<the block you want>.get(), block -> LootTable.lootTable());
 
 
         dropSelf(ModBlocks.TEST_STAIR.get());
@@ -84,10 +87,13 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 block -> createMultipleOreDrops(ModBlocks.DEEPSLATE_PURPLE_GARNET_ORE.get(), ModItems.PURPLE_GARNET.get(), 0, 2));
         // Crops
         this.add(ModBlocks.HOPS_CROP.get(), this.createCropDrops(ModBlocks.HOPS_CROP.get(),
-                ModItems.HOPS_SEED.get(), ModItems.HOPS.get(), cropFullyGrownCondition(ModBlocks.HOPS_CROP, HopsCrop.AGE, HopsCrop.MAX_AGE)));
+                ModItems.HOPS.get(), ModItems.HOPS_SEEDS.get(), cropFullyGrownCondition(ModBlocks.HOPS_CROP, HopsCrop.AGE, HopsCrop.MAX_AGE)));
 
         this.add(ModBlocks.MANDRAKE_CROP.get(), this.createCropDrops(ModBlocks.MANDRAKE_CROP.get(),
-                ModItems.MANDRAKE_ROOT.get(), ModItems.MANDRAKE.get(), cropFullyGrownCondition(ModBlocks.MANDRAKE_CROP, MandrakeCrop.AGE, MandrakeCrop.MAX_AGE)));
+                ModItems.MANDRAKE.get(), ModItems.MANDRAKE_ROOT.get(), cropFullyGrownCondition(ModBlocks.MANDRAKE_CROP, MandrakeCrop.AGE, MandrakeCrop.MAX_AGE)));
+
+        this.add(ModBlocks.CABBAGE_CROP.get(), this.createCropDrops(ModBlocks.CABBAGE_CROP.get(),
+                ModItems.CABBAGE.get(), ModItems.CABBAGE_SEEDS.get(), cropFullyGrownCondition(ModBlocks.CABBAGE_CROP, CabbageCrop.AGE, CabbageCrop.MAX_AGE)));
 
     }
     // Loot from harvest if crop is fully grown

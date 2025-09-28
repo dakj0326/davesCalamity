@@ -48,6 +48,14 @@ public class ModItemModelProvider extends ItemModelProvider {
         armorItem(ModItems.TUNGSTEN_CHESTPLATE.get(), "tungsten_chestplate");
         armorItem(ModItems.TUNGSTEN_LEGGINGS.get(), "tungsten_leggings");
         armorItem(ModItems.TUNGSTEN_BOOTS.get(), "tungsten_boots");
+        armorItem(ModItems.CHITIN_HELMET.get(), "chitin_helmet");
+        armorItem(ModItems.CHITIN_CHESTPLATE.get(), "chitin_chestplate");
+        armorItem(ModItems.CHITIN_LEGGINGS.get(), "chitin_leggings");
+        armorItem(ModItems.CHITIN_BOOTS.get(), "chitin_boots");
+        armorItem(ModItems.REINFORCED_LEATHER_HELMET.get(), "reinforced_leather_helmet");
+        armorItem(ModItems.REINFORCED_LEATHER_CHESTPLATE.get(), "reinforced_leather_chestplate");
+        armorItem(ModItems.REINFORCED_LEATHER_LEGGINGS.get(), "reinforced_leather_leggings");
+        armorItem(ModItems.REINFORCED_LEATHER_BOOTS.get(), "reinforced_leather_boots");
 
         basicItem(ModItems.ALUMINIUM_INGOT.get());
         basicItem(ModItems.BRONZE_AXE.get());
@@ -57,9 +65,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.BRONZE_SHOVEL.get());
         basicItem(ModItems.BRONZE_SWORD.get());
         basicItem(ModItems.CABBAGE.get());
+        basicItem(ModItems.CABBAGE_SEEDS.get());
+        basicItem(ModItems.CHITIN.get());
+        basicItem(ModItems.CHITIN_POWDER.get());
         basicItem(ModItems.COKE.get());
         basicItem(ModItems.HOPS.get());
-        basicItem(ModItems.HOPS_SEED.get());
+        basicItem(ModItems.HOPS_SEEDS.get());
         basicItem(ModItems.MANDRAKE.get());
         basicItem(ModItems.MANDRAKE_ROOT.get());
         basicItem(ModItems.MANGO.get());
@@ -68,6 +79,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.RAW_SILVER.get());
         basicItem(ModItems.RAW_TIN.get());
         basicItem(ModItems.RAW_TUNGSTEN.get());
+        basicItem(ModItems.REINFORCED_LEATHER.get());
         basicItem(ModItems.SILVER_INGOT.get());
         basicItem(ModItems.STEEL_AXE.get());
         basicItem(ModItems.STEEL_HOE.get());
@@ -85,12 +97,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.TUNGSTEN_INGOT.get());
 
 
-
-
-
-        // Spawn Eggs
+        withExistingParent(ModItems.DUNE_WRAITH_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent(ModItems.MANDRAKE_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent(ModItems.SAND_SCORPION_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.STONE_GOLEM_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent("desert_lily", modLoc("block/desert_lily"));
 
 

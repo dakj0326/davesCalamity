@@ -35,7 +35,8 @@ public class ZombieWalkerEntity extends BasicMonster {
         // Add AttackSpeed
     }
 
-    private void setupAnimationStates() {
+    @Override
+    public void setupAnimationStates() {
         // Idle cycle
         if (this.idleAnimationTimeout <= 0) {
             this.idleAnimationTimeout = 58; // ticks

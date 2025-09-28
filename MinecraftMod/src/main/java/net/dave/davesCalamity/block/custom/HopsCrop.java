@@ -18,7 +18,7 @@ public class HopsCrop extends CropBlock {
 
     @Override
     protected ItemLike getBaseSeedId() {
-        return ModItems.HOPS_SEED.get();
+        return ModItems.HOPS_SEEDS.get();
     }
 
     @Override

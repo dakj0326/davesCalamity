@@ -3,12 +3,14 @@
   "block.davescalamity.aluminium_ore": "Aluminium Ore",
   "block.davescalamity.bronze_block": "Bronze Block",
   "block.davescalamity.blooming_cactus": "Blooming Cactus",
+  "block.davescalamity.cabbage_crop": "Cabbage Crop ",
   "block.davescalamity.deepslate_aluminium_ore": "Deepslate Aluminium Ore",
   "block.davescalamity.deepslate_purple_garnet_ore": "Deepslate Purple Garnet Ore",
   "block.davescalamity.deepslate_silver_ore": "Deepslate Silver Ore",
   "block.davescalamity.deepslate_tin_ore": "Deepslate Tin Ore",
   "block.davescalamity.deepslate_tungsten_ore": "Deepslate Tungsten Ore",
   "block.davescalamity.desert_lily": "Desert Lily",
+  "block.davescalamity.dune_wraith_skull": "Dune Wraith Skull",
   "block.davescalamity.hops_crop": "Hops Crop",
   "block.davescalamity.mandrake_crop": "Mandrake Crop",
   "block.davescalamity.raw_aluminium_block": "Raw Aluminium Block",
@@ -34,6 +36,7 @@
   "creativetab.davescalamity.mod_test": "Mod Test",
 
 
+
   "effect.davescalamity.burdened": "Burdened",
   "effect.davescalamity.deadly_precision": "Deadly Precision",
   "effect.davescalamity.heavy_stance": "Heavy Stance",
@@ -49,8 +52,11 @@
 
 
 
+  "entity.davescalamity.dune_wraith": "Dune Wraith",
   "entity.davescalamity.mandrake": "Mandrake",
+  "entity.davescalamity.sand_cluster": "Sand Cluster",
   "entity.davescalamity.sand_scorpion": "Sand Scorpion",
+  "entity.davescalamity.stone_golem": "Stone Golem",
 
 
 
@@ -70,7 +76,15 @@
   "item.davescalamity.bronze_shovel": "Bronze Shovel",
   "item.davescalamity.bronze_sword": "Bronze Sword",
   "item.davescalamity.cabbage": "Cabbage",
+  "item.davescalamity.cabbage_seeds": "Cabbage Seeds",
+  "item.davescalamity.chitin": "Chitin",
+  "item.davescalamity.chitin_boots": "Chitin Boots",
+  "item.davescalamity.chitin_chestplate": "Chitin Chestplate",
+  "item.davescalamity.chitin_helmet": "Chitin Helmet",
+  "item.davescalamity.chitin_leggings": "Chitin Leggings",
+  "item.davescalamity.chitin_powder": "Chitin Powder",
   "item.davescalamity.coke": "Coke",
+  "item.davescalamity.dune_wraith_spawn_egg": "Dune Wraith Spawn Egg",
   "item.davescalamity.hops": "Hops",
   "item.davescalamity.hops_seeds": "Hops Seeds",
   "item.davescalamity.mandrake_spawn_egg": "Mandrake Spawn Egg",
@@ -82,6 +96,11 @@
   "item.davescalamity.raw_silver": "Raw Silver",
   "item.davescalamity.raw_tin": "Raw Tin",
   "item.davescalamity.raw_tungsten": "Raw Tungsten",
+  "item.davescalamity.reinforced_leather": "Reinforced Leather",
+  "item.davescalamity.reinforced_leather_boots": "Reinforced Leather Boots",
+  "item.davescalamity.reinforced_leather_chestplate": "Reinforced Leather Tunic",
+  "item.davescalamity.reinforced_leather_helmet": "Reinforced Leather Cap",
+  "item.davescalamity.reinforced_leather_leggings": "Reinforced Leather Leggings",
   "item.davescalamity.sand_scorpion_spawn_egg": "Sand Scorpion Spawn Egg",
   "item.davescalamity.silver_boots": "Silver Boots",
   "item.davescalamity.silver_chestplate": "Silver Chestplate",
@@ -108,6 +127,7 @@
   "item.davescalamity.steel_pickaxe": "Steel Pickaxe",
   "item.davescalamity.steel_shovel": "Steel Shovel",
   "item.davescalamity.steel_Sword": "Steel Sword",
+  "item.davescalamity.stone_golem_spawn_egg": "Stone Golem Spawn Egg",
   "item.davescalamity.tin_boots": "Tin Boots",
   "item.davescalamity.tin_chestplate": "Tin Chestplate",
   "item.davescalamity.tin_helmet": "Tin Helmet",

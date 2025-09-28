@@ -95,6 +95,22 @@ public class ModItems {
             () -> new ArmorItem(ModArmorMaterials.SILVER.getHolder().get(), ArmorItem.Type.LEGGINGS, new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> SILVER_BOOTS = ITEMS.register("silver_boots",
             () -> new ArmorItem(ModArmorMaterials.SILVER.getHolder().get(), ArmorItem.Type.BOOTS, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> CHITIN_HELMET = ITEMS.register("chitin_helmet",
+            () -> new ArmorItem(ModArmorMaterials.CHITIN.getHolder().get(), ArmorItem.Type.HELMET, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> CHITIN_CHESTPLATE = ITEMS.register("chitin_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.CHITIN.getHolder().get(), ArmorItem.Type.CHESTPLATE, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> CHITIN_LEGGINGS = ITEMS.register("chitin_leggings",
+            () -> new ArmorItem(ModArmorMaterials.CHITIN.getHolder().get(), ArmorItem.Type.LEGGINGS, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> CHITIN_BOOTS = ITEMS.register("chitin_boots",
+            () -> new ArmorItem(ModArmorMaterials.CHITIN.getHolder().get(), ArmorItem.Type.BOOTS, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> REINFORCED_LEATHER_HELMET = ITEMS.register("reinforced_leather_helmet",
+            () -> new ArmorItem(ModArmorMaterials.REINFORCED_LEATHER.getHolder().get(), ArmorItem.Type.HELMET, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> REINFORCED_LEATHER_CHESTPLATE = ITEMS.register("reinforced_leather_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.REINFORCED_LEATHER.getHolder().get(), ArmorItem.Type.CHESTPLATE, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> REINFORCED_LEATHER_LEGGINGS = ITEMS.register("reinforced_leather_leggings",
+            () -> new ArmorItem(ModArmorMaterials.REINFORCED_LEATHER.getHolder().get(), ArmorItem.Type.LEGGINGS, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> REINFORCED_LEATHER_BOOTS = ITEMS.register("reinforced_leather_boots",
+            () -> new ArmorItem(ModArmorMaterials.REINFORCED_LEATHER.getHolder().get(), ArmorItem.Type.BOOTS, new Item.Properties().stacksTo(1)));
 
 
     // Tools
@@ -139,24 +155,35 @@ public class ModItems {
     public static final RegistryObject<Item> HOPS = ITEMS.register("hops", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> MANDRAKE = ITEMS.register("mandrake", () -> new Item(new Item.Properties()));
 
-    //public static final RegistryObject<Item> DESERT_LILy = ITEMS.register("desert_lily", () -> new BlockItem(ModBlocks.DESERT_LILY.get(), new Item.Properties()));
-
     // Fuel
     public static final RegistryObject<Item> COKE = ITEMS.register("coke", () -> new CokeItem(new Item.Properties(), 1200));
 
     // Seeds
-    public static final RegistryObject<Item> HOPS_SEED = ITEMS.register("hops_seeds",
+    public static final RegistryObject<Item> HOPS_SEEDS = ITEMS.register("hops_seeds",
             () -> new ItemNameBlockItem(ModBlocks.HOPS_CROP.get(), new Item.Properties()));
 
     public static final RegistryObject<Item> MANDRAKE_ROOT = ITEMS.register("mandrake_root",
             () -> new ItemNameBlockItem(ModBlocks.MANDRAKE_CROP.get(), new Item.Properties()));
 
+    public static final RegistryObject<Item> CABBAGE_SEEDS = ITEMS.register("cabbage_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.CABBAGE_CROP.get(), new Item.Properties()));
+
     // Spawn Eggs
+    public static final RegistryObject<Item> DUNE_WRAITH_SPAWN_EGG = ITEMS.register("dune_wraith_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.DUNE_WRAITH, 0xbbbb00, 0x401111, new Item.Properties()));
     public static final RegistryObject<Item> MANDRAKE_SPAWN_EGG = ITEMS.register("mandrake_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntities.MANDRAKE, 0x252525, 0x505050, new Item.Properties()));
-
     public static final RegistryObject<Item> SAND_SCORPION_SPAWN_EGG = ITEMS.register("sand_scorpion_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntities.SAND_SCORPION, 0x550125, 0x010150, new Item.Properties()));
+    public static final RegistryObject<Item> STONE_GOLEM_SPAWN_EGG = ITEMS.register("stone_golem_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.STONE_GOLEM, 0x777777, 0x111111, new Item.Properties()));
+
+    // Crafting Items
+    public static final RegistryObject<Item> CHITIN = ITEMS.register("chitin", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CHITIN_POWDER = ITEMS.register("chitin_powder", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> REINFORCED_LEATHER = ITEMS.register("reinforced_leather", () -> new Item(new Item.Properties()));
+
+
 
 
 

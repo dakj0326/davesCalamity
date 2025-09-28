@@ -1,5 +1,6 @@
 package net.dave.davesCalamity.entity.custom;
 
+import net.dave.davesCalamity.item.ModItems;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.damagesource.DamageSource;
@@ -83,5 +84,21 @@ public class MandrakeEntity extends Animal {
     @Override
     protected @Nullable SoundEvent getHurtSound(DamageSource pDamageSource) {
         return super.getHurtSound(pDamageSource);
+    }
+
+    @Override
+    protected void dropCustomDeathLoot(ServerLevel level, DamageSource source, boolean causedByPlayer) {
+        super.dropCustomDeathLoot(level, source, causedByPlayer);
+
+        int seedCount = this.random.nextInt(5);
+        if (seedCount == 4) {
+            this.spawnAtLocation(new ItemStack(ModItems.MANDRAKE_ROOT.get(), 1));
+
+        }
+        int cropCount = this.random.nextInt(2);
+        if (cropCount == 1) {
+            this.spawnAtLocation(new ItemStack(ModItems.MANDRAKE.get(), 1));
+
+        }
     }
 }

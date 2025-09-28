@@ -1,7 +1,7 @@
 package net.dave.davesCalamity.entity.client.SandScorpoin;
 
-
 import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.dave.davesCalamity.DavesCalamity;
 import net.dave.davesCalamity.entity.custom.SandScorpionEntity;
 import net.minecraft.client.renderer.MultiBufferSource;

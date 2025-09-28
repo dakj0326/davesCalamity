@@ -28,6 +28,8 @@ public final class ArmorSetKeys {
         MAP.put(BuiltInRegistries.f_315942_.getKey(ModArmorMaterials.STEEL.get()), "steel");
         MAP.put(BuiltInRegistries.f_315942_.getKey(ModArmorMaterials.TUNGSTEN.get()), "tungsten");
         MAP.put(BuiltInRegistries.f_315942_.getKey(ModArmorMaterials.SILVER.get()), "silver");
+        MAP.put(BuiltInRegistries.f_315942_.getKey(ModArmorMaterials.CHITIN.get()), "chitin");
+        MAP.put(BuiltInRegistries.f_315942_.getKey(ModArmorMaterials.REINFORCED_LEATHER.get()), "reinforced_leather");
     }
 
     public static String keyForMaterial(ArmorMaterial material) {
